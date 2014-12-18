@@ -1,0 +1,191 @@
+$pink: #f84877;
+$l_pink: #ff6e7b;
+$blue: #04d9d9;
+$green: #bcd952;
+$orange: #f27b50;
+$d_grey: #3d3b3b;
+$m_grey: #c6c6c6;
+$l_grey: #f0f0f0;
+
+$roboto: 'Roboto', sans-serif;
+
+
+h1,h2,h3,h4,h5,h6{
+	font-family: $roboto;
+	font-weight: 300;
+}
+
+h1{
+	font-size: 3rem;
+	padding: 1rem 0 1rem;
+}
+h5{
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 150%;
+}
+h6{
+	font-size: 1rem;
+	font-weight: 300;
+	color: $m_grey;
+}
+
+
+.shadow{
+	box-shadow: rgba(102, 102, 102, 0.65) 0 3px 7px;
+}
+
+.flex{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+header{
+	background: $blue; /* Old browsers */
+	background: -moz-linear-gradient(left,  $blue 0%, $green 100%); /* FF3.6+ */
+	background: -webkit-linear-gradient(left,  $blue 0%,$green 100%); /* Chrome10+,Safari5.1+ */
+	background: -ms-linear-gradient(left,  $blue 0%,$green 100%); /* IE10+ */
+	background: linear-gradient(to right,  $blue 0%,$green 100%); /* W3C */
+	width: 100%;
+	height: 5rem;
+	position: relative;
+	z-index: 20;
+	align-items: center;
+	justify-content: center;
+
+	input{
+		font-size: 2rem;
+		padding: 0.5rem;
+		border: none;
+		text-align: center;
+		width: 40rem;
+		font-family: $roboto;
+		font-weight: 300;
+
+	}
+
+	.border_bottom{
+		height: 4px;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: -moz-linear-gradient(right,  $blue 0%, $green 100%); /* FF3.6+ */
+		background: -webkit-linear-gradient(right,  $blue 0%,$green 100%); /* Chrome10+,Safari5.1+ */
+		background: -ms-linear-gradient(right,  $blue 0%,$green 100%); /* IE10+ */
+		background: linear-gradient(to left,  $blue 0%,$green 100%); /* W3C */
+	}
+}
+
+.sidebar{
+	background: rgba($d_grey,0.9);
+	border-right: solid $pink 2px;
+	width: 250px;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 30;
+	padding: 5rem 0;
+
+	ul{
+		li{
+			font-size: 2rem;
+			font-family: $roboto;
+			color: $m_grey;
+			display: block;
+			padding: 1rem 2rem;
+			text-align: right;
+			font-weight: 300;
+
+			&:hover{
+				background: $pink;
+				color: white;
+			}
+		}
+		
+		.current{
+			color: white;
+			background: $l_pink;
+		}
+	}
+}
+
+.control_bar{
+	background: $d_grey;
+	width: 100%;
+	height: 5rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding-left: 250px;
+}
+
+.main_view{
+	padding: 2rem 2rem 2rem calc(250px + 2rem);
+	width: 100%;
+
+	.reccd{
+		justify-content: flex-start;
+	}
+}
+
+.album_link{
+	width: 250px;
+	margin: 1rem;
+
+	.cover_holder{
+		padding: 10px;
+		@extend .shadow;
+		margin-bottom: 1rem;
+
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+
+.menu_btn{
+	position: fixed;
+	top: 1.5rem;
+	left: 2rem;
+	font-size: 3rem;
+	color: white;
+	z-index: 40;
+}
+
+
+.grad_bg-1{
+	@include gradient(45deg, rgba($blue,0.5), rgba($green,0.5));
+}
+
+.grad_bg-2{
+	@include gradient(45deg, rgba($blue,0.5), rgba($pink,0.5));
+}
+
+.grad_bg-3{
+	@include gradient(45deg, rgba($d_grey,0.5), rgba($pink,0.5));
+}
+
+.grad_bg-4{
+	@include gradient(45deg, rgba($pink,0.5), rgba($orange,0.5));
+}
+
+.grad_bg-5{
+	@include gradient(45deg, rgba($orange,0.5), rgba($green,0.5));
+
+}
+.grad_bg-6{
+	@include gradient(45deg, rgba($pink,0.5), rgba($green,0.5));
+}
+
+.grad_bg-7{
+	@include gradient(45deg, rgba($blue,0.5), rgba($orange,0.5));
+}
+
+.grad_bg-8{
+	@include gradient(45deg, rgba($pink,0.5), rgba($l_pink,0.5));
+}

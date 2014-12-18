@@ -1,0 +1,1 @@
+(header>.search)+(section.sidebar>ul>li*4)+(section.control_bar>.now_playing+.controls+.vol)+section.playlist+(section.main_view>h1+div.reccd>(div.album_link>.(cover_holder>img)+h5+h6)*8)
