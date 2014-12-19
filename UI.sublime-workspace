@@ -4,100 +4,160 @@
 		"selected_items":
 		[
 			[
-				"back",
-				"background"
+				"pad",
+				"padding-bottom"
 			],
 			[
-				"margin",
-				"margin-top"
+				"contro",
+				"controlBar"
 			],
 			[
-				"l",
-				"l_grey"
+				"main",
+				"maniView"
 			],
 			[
 				"padd",
-				"padding"
-			],
-			[
-				"z-",
-				"z-index"
-			],
-			[
-				"backg",
-				"background-position"
-			],
-			[
-				"tex",
-				"text-decoration"
-			],
-			[
-				"ba",
-				"background-color"
-			],
-			[
-				"pad",
-				"padding"
-			],
-			[
-				"font",
-				"font-size"
-			],
-			[
-				"h",
-				"height"
-			],
-			[
-				"padding",
-				"padding-top"
-			],
-			[
-				"bac",
-				"background"
-			],
-			[
-				"mar",
-				"margin"
+				"padding-left"
 			],
 			[
 				"max",
 				"max-width"
 			],
 			[
-				"pos",
-				"position"
+				"r",
+				"rgba()"
 			],
 			[
-				"op",
-				"opacity"
+				"backg",
+				"background"
 			],
 			[
-				"cu",
-				"cuboidTitle"
+				"l",
+				"l_purple"
 			],
 			[
-				"d_",
-				"d_blue"
+				"hr",
+				"href	Attr"
+			],
+			[
+				"scrol",
+				"scrollButton"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"style",
+				"style	Attr"
 			],
 			[
 				"background",
 				"background"
 			],
 			[
-				"menu",
-				"menuOverlay"
-			],
-			[
-				"nav",
-				"navItems"
-			],
-			[
 				"fun",
 				"function"
 			],
 			[
-				"nt",
-				"nth-of-type"
+				"modal",
+				"modalSlider"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"backgro",
+				"background-repeat"
+			],
+			[
+				"z-",
+				"z-index"
+			],
+			[
+				"d",
+				"d_grey"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"backgr",
+				"background-size"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"cl",
+				"click"
+			],
+			[
+				"close",
+				"closeMenu"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"MARGI",
+				"margin-bottom"
+			],
+			[
+				"MAR",
+				"margin"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"paddi",
+				"padding-bottom"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"head",
+				"header	Tag"
 			]
 		]
 	},
@@ -107,7 +167,23 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 78,
+				"buffer_size": 2211,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/queries/_base.scss",
+			"settings":
+			{
+				"buffer_size": 4109,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/main.js",
+			"settings":
+			{
+				"buffer_size": 744,
 				"line_ending": "Windows"
 			}
 		}
@@ -115,35 +191,35 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 486.0,
 		"selected_items":
 		[
 			[
-				"Snippet: ",
-				"Snippet: html"
-			],
-			[
-				"html",
-				"Set Syntax: HTML (Twig)"
+				"uri",
+				"Package Control: Upgrade/Overwrite All Packages"
 			],
 			[
 				"ins",
 				"Package Control: Install Package"
 			],
 			[
+				"Snippet: ",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
 				"instal",
-				"Package Control: Install Package"
-			],
-			[
-				"dis",
-				"Package Control: Disable Package"
-			],
-			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
-				"inst",
 				"Package Control: Install Package"
 			],
 			[
@@ -151,7 +227,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 512.0
+		"width": 640.0
 	},
 	"console":
 	{
@@ -172,110 +248,159 @@
 	},
 	"expanded_folders":
 	[
-		"/D/Users/Dan/Documents/GitHub/Surround_UI"
+		"/C/Users/Dan/Documents/GitHub/SurroundUI",
+		"/C/Users/Dan/Documents/GitHub/SurroundUI/css",
+		"/C/Users/Dan/Documents/GitHub/SurroundUI/css/queries",
+		"/C/Users/Dan/Documents/GitHub/SurroundUI/js"
 	],
 	"file_history":
 	[
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/css/queries/_600.scss",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/style.css",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/index.php",
-		"/C/Users/Dan/Desktop/prism.js",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/views/single.twig",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/views/base.twig",
-		"/C/Users/Dan/Desktop/fontawesome-webfont.svg",
-		"/C/Users/Dan/Desktop/Roboto_v1.2/RobotoCondensed/RobotoCondensed-Light.ttf",
-		"/C/Users/Dan/Desktop/Roboto_v1.2/RobotoCondensed/RobotoCondensed-Regular.ttf",
-		"/C/Users/Dan/Desktop/Roboto_v1.2/RobotoCondensed/RobotoCondensed-LightItalic.ttf",
-		"/C/Users/Dan/Desktop/Roboto_v1.2/RobotoCondensed/RobotoCondensed-Italic.ttf",
-		"/C/Users/Dan/Desktop/Roboto_v1.2/RobotoCondensed/RobotoCondensed-Bold.ttf",
-		"/C/Users/Dan/Desktop/Roboto_v1.2/RobotoCondensed/RobotoCondensed-BoldItalic.ttf",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/views/partials/header.twig",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/css/queries/_768.scss",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/css/theme.scss",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/single.php",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/js/main.js",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/functions.php",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/css/_functions.scss",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/css/queries/_base.scss",
-		"/D/wamp/www/experiments/rubiks/style.scss",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/css/queries/old/_base.scss",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/views/index.twig",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/old/style.css",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/js/site.js",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/404.php",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/old/js/site.js",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/css/_defaults.scss",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/css/style.css",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/css/style.scss",
-		"/D/wamp/www/experiments/rubiks/index.html",
-		"/D/wamp/www/experiments/rubiks/style.css",
-		"/D/wamp/www/experiments/rubiks/_functions.scss",
-		"/D/wamp/www/experiments/3dbutton/main.js",
-		"/D/wamp/www/experiments/3dbutton/_functions.scss",
-		"/C/Users/Dan/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/Users/Dan/AppData/Roaming/Sublime Text 3/Packages/User/SCSS.sublime-settings",
-		"/C/Users/Dan/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/views/front-page.twig",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/css/queries/_1024.scss",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/css/queries/_1280.scss",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/css/queries/_480.scss",
-		"/D/wamp/www/danproudfoot/wp-content/themes/dnprdft3/front-page.php",
-		"/D/wamp/www/wordpress/wp-config.php",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/parts/shared/footer.php",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/css/queries/_base.scss",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/functions.php",
-		"/D/Users/Dan/Documents/Websites/dnprdft/front-page.php",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/front-page.php",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/parts/shared/header-home.php",
-		"/D/Users/Dan/Documents/Websites/dnprdft/css/poop.css",
-		"/C/Users/Dan/AppData/Local/Temp/7zO19C3.tmp/header.php",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/old/views/base.twig",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/parts/shared/header.php",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/js/site.js",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/index.php",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/old/views/author.twig",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/old/views/front-page.twig",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/comments.php",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/style.css",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/views/single.twig",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/views/index.twig",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/views/front-page.twig",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/views/page.twig",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/views/base.twig",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/single.php",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/views/comment.twig",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/css/theme.scss",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/css/_functions.scss",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/views/html-header.twig",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/css/theme.css",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/.gitignore",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/css/reset.css",
-		"/D/Users/Dan/Documents/Websites/timber-base/css/theme.css",
-		"/D/Users/Dan/Documents/Websites/timber-base/css/theme.scss",
-		"/D/Users/Dan/Documents/Websites/timber-base/style.css",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/css/queries/_480.scss",
-		"/D/Users/Dan/Documents/Websites/dnprdft/style.css",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/views/footer.twig",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/views/404.twig",
-		"/D/wamp/www/wordpress/wp-content/themes/dnprdft3/archive.php",
-		"/D/wamp/www/wordpress/wp-content/themes/beach/css/base.css",
-		"/D/Users/Dan/Documents/Websites/experiments/scroll/style/style.scss",
-		"/D/Users/Dan/Documents/Websites/experiments/scroll/index.html",
-		"/D/wamp/www/wordpress/.htaccess",
-		"/D/wamp/www/wordpress/wp-content/themes/beach/style.css",
-		"/D/Users/Dan/Downloads/MICROSOFT.WINDOWS.8.1.RTM.X64.ENGLISH.DVD-WZT/MICROSOFT.WINDOWS.8.1.RTM.X64.ENGLISH.DVD-WZT.NFO",
-		"/D/Users/Dan/Downloads/MICROSOFT.WINDOWS.8.1.RTM.X64.ENGLISH.DVD-WZT/Windows_8.1_EN-US_x64.ISO.NFO"
+		"/C/Users/Dan/AppData/Local/Temp/Temp1_DragDropInteractions.zip/DragDropInteractions/README.md",
+		"/C/Users/Dan/Documents/GitHub/SurroundUI/css/style.scss",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/css/queries/_1020.scss",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/css/queries/_base.scss",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/page-history.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/single-gallery.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/css/queries/_600.scss",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/single-gallery.php",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/page-gallery.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/js/main.js",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/page-seating.php",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/page-designers.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/menus/desktop.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/page-designers.php",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/page-seating.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/menus/mobile.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/page-team.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/page-how-we-work.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/page-contact.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/page-team.php",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/page-blog.php",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/page-history.php",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/page-gallery.php",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/page-faq.php",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/page-contact.php",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/media/arrow.svg",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/media/menu.svg",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/media/twitter_icon.svg",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/front-page.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/footer.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/functions.php",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/page-case-studies.twig",
+		"/C/Users/Dan/Desktop/config.php",
+		"/C/wamp/www/nexmoney/config.php",
+		"/C/wamp/www/nexmoney/.htaccess",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/front-page.php",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/js/jquery.stellar.min.js",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/js/slider.js",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/search.php",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/craftwood.sublime-project",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/single-faq.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/page-our-clients.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/fonts/exljbris - MuseoSlab-500.otf",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/page-our-clients.php",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/js/detect.min.js",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/css/_defaults.scss",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/page-how-we-work.php",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/js/viewport-units-buggyfill.js",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/js/viewport-units-buggyfill.min.js",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/media/craftmark_logo.svg",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/js/slider.min.js",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/js/main.min.js",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/page-faq.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/single-faq.php",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/js/parallax.js",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/js/parallax.min.js",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/js/gallery.js",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/js/gallery.min.js",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/base-bare.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/base.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/header.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/js/enquire.min.js",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/css/style.css",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/single.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/views/index.twig",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/single.php",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/css/modules/_prefixes.scss",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/.gitignore",
+		"/C/wamp/www/craftwood/wp-content/themes/craftwood/page-history",
+		"/C/wamp/www/nexmoney/content/mortgaging/recycle.md",
+		"/C/Users/Dan/Desktop/nexmoney.griffinclub.com-Oct-2014",
+		"/C/wamp/www/nexmoney/themes/nexmoney/css/queries/768.less",
+		"/C/wamp/www/nexmoney/content/contact.md",
+		"/C/wamp/www/craftwood/wp-config.php",
+		"/C/wamp/www/nexmoney/content/testimonials.md",
+		"/C/Users/Dan/Desktop/process.php",
+		"/C/Users/Dan/Desktop/New folder/process.php",
+		"/C/wamp/www/nexmoney/themes/nexmoney/process.php",
+		"/C/wamp/www/wordpress/wp-config-sample.php",
+		"/C/wamp/www/nexmoney/content/protection/critical-illness-insurance.md",
+		"/C/wamp/www/nexmoney/content/about/promise.md",
+		"/C/wamp/www/nexmoney/content/services/index.md",
+		"/C/wamp/www/nexmoney/themes/nexmoney/services.html",
+		"/C/wamp/www/nexmoney/content/about/service-guarantee.md",
+		"/C/wamp/www/nexmoney/content/about/share-the-love.md",
+		"/C/wamp/www/nexmoney/themes/nexmoney/submenus/guide.html",
+		"/C/wamp/www/nexmoney/content/guides/index.md",
+		"/C/wamp/www/nexmoney/content/guides/buy-to-let.md",
+		"/C/wamp/www/nexmoney/content/useful-links.md",
+		"/C/wamp/www/nexmoney/.gitignore",
+		"/C/wamp/www/nexmoney/themes/nexmoney/homepage.html",
+		"/C/wamp/www/nexmoney/themes/nexmoney/contact.html",
+		"/C/wamp/www/nexmoney/themes/nexmoney/header.html",
+		"/C/wamp/www/nexmoney/vendor/twig/twig/lib/Twig/NodeVisitorInterface.php",
+		"/C/wamp/www/nexmoney/vendor/twig/twig/lib/Twig/Filter.php",
+		"/C/wamp/www/nexmoney/content/mortgaging/help-to-buy-1.md",
+		"/C/wamp/www/nexmoney/content/exclusives.md",
+		"/C/wamp/www/nexmoney/themes/nexmoney/footer.html",
+		"/C/wamp/www/nexmoney/themes/nexmoney/css/queries/base.less",
+		"/C/wamp/www/nexmoney/content/calculators/rent.md",
+		"/C/wamp/www/nexmoney/themes/nexmoney/menus/mobile.html",
+		"/C/wamp/www/nexmoney/content/mortgaging/remortgaging.md",
+		"/C/wamp/www/nexmoney/themes/nexmoney/submenus/mortgages.html",
+		"/C/wamp/www/nexmoney/content/other-services/commercial-finance.md",
+		"/C/wamp/www/nexmoney/content/Images/services/convert.py",
+		"/C/wamp/www/nexmoney/content/mortgaging/shared-ownership.md",
+		"/C/wamp/www/nexmoney/content/about/introducers-partners.md",
+		"/C/wamp/www/nexmoney/vendor/twig/twig/lib/Twig/Parser.php",
+		"/C/wamp/www/nexmoney/content/privacy.md",
+		"/C/wamp/www/nexmoney/content/portal.md",
+		"/C/wamp/www/nexmoney/content/calculators/index.md",
+		"/C/wamp/www/nexmoney/content/about/index.md",
+		"/C/wamp/www/nexmoney/content/forum.md",
+		"/C/wamp/www/nexmoney/themes/nexmoney/share-the-love.html",
+		"/C/wamp/www/nexmoney/vendor/twig/twig/lib/Twig/NodeVisitor/SafeAnalysis.php",
+		"/C/wamp/www/nexmoney/themes/nexmoney/calculators/save.html",
+		"/C/wamp/www/nexmoney/content/calculators/save.md",
+		"/C/wamp/www/nexmoney/content/calculators/borrow.md",
+		"/C/wamp/www/nexmoney/vendor/twig/twig/lib/Twig/FunctionCallableInterface.php",
+		"/C/wamp/www/nexmoney/vendor/twig/twig/lib/Twig/FilterCallableInterface.php",
+		"/C/wamp/www/nexmoney/vendor/twig/twig/lib/Twig/TestCallableInterface.php",
+		"/C/wamp/www/nexmoney/vendor/composer/autoload_classmap.php",
+		"/C/wamp/www/nexmoney/themes/nexmoney/js/Calculator_Save.js",
+		"/C/wamp/www/nexmoney/themes/nexmoney/js/Calculator_Rent.js",
+		"/C/wamp/www/nexmoney/themes/nexmoney/js/Calculator_Cost.js",
+		"/C/wamp/www/nexmoney/themes/nexmoney/js/Calculator_Borrow.js",
+		"/C/wamp/www/nexmoney/themes/nexmoney/js/Calculator.js",
+		"/C/wamp/www/nexmoney/themes/nexmoney/calculator.html"
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 31.0
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 117.0,
 		"where_history":
 		[
-			"D:\\wamp\\www\\wordpress\\wp-content\\themes\\dnprdft3",
+			"C:\\wamp\\www\\craftwood\\wp-content\\themes\\craftwood",
+			"",
+			"C:\\wamp\\www\\nexmoney",
+			"C:\\wamp\\www\\nexmoney\\",
+			"C:\\wamp\\www\\nexmoney\\content",
+			"C:\\Users\\Dan\\Documents\\GitHub\\smarterwifi",
+			"<open files>,C:\\Users\\Dan\\Documents\\GitHub\\smarterwifi",
+			"<open files>",
 			""
 		]
 	},
@@ -284,89 +409,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"red",
+			"250px",
+			"stewart",
+			"andy",
+			"gallery",
+			"title",
+			"2",
+			"white",
+			"p",
+			"gallery_images",
+			"case",
+			"detail",
+			"design_details",
+			"manu",
+			"}\n",
+			"quarter",
+			"container",
+			"menu",
+			"kyle begins",
+			"Framemaker",
+			"type",
+			"media-",
+			"btn",
+			"tel",
+			"img",
+			"scroll",
+			"deliver",
+			"sophie",
+			"slide--",
+			"dropdown",
+			"kyle.png",
+			"dexter.png",
+			"mandy",
+			"lan",
+			"broc",
+			"broch",
+			"img",
+			"root",
+			"url",
+			"andy",
+			"overl",
+			"panel",
+			"h3",
+			"third\"",
+			"third",
+			"two-thirds",
+			"float",
+			"uri",
+			"designers",
+			"container",
 			"main",
-			"post",
-			"color",
-			"$red,0",
-			"purple",
-			"100%",
-			"30%",
-			"45deg",
-			" 0%",
-			"0%",
-			"45",
-			"z-in",
-			"46,9,39",
-			"background",
-			"listing",
-			"  ",
-			"7",
-			"scale3d",
-			"50vw",
-			"21rem",
-			"-$smallSize",
-			"translateZ(",
-			"7rem",
-			" cube",
-			"cube ",
-			"cube",
-			"250",
-			"300",
-			"window",
-			"latest",
-			"main",
-			"scale(0.5)",
-			"/1.25",
-			"1.5",
-			"perspe",
-			"per",
-			"	<nav class=\"main-navigation layer--max fixed--right\" role=\"navigation\">\n				<div class=\"nav__button cuboid__contain\">\n					<div class=\"cube cuboid--top\"></div>	\n					<div class=\"cube cuboid--bottom\"></div>\n					<div class=\"cube cuboid--front\">a</div>\n					<div class=\"cube cuboid--back\"></div>\n					<div class=\"cube cuboid--side-1\"></div>\n					<div class=\"cube cuboid--side-2\"></div>\n				</div>	\n\n			</nav>	",
-			"perspec",
-			"scale",
-			"cuboid(",
-			"respond",
-			"comment",
-			"foo",
-			"class=\"content\"",
-			"bar",
-			"comment",
-			"cuboid__pers",
-			"cuboid--title",
-			"%;\n",
-			"95",
-			"25%",
-			"25",
-			"section",
-			"flex",
-			"items",
-			"vh",
-			"$height",
-			"width: $width;",
-			"125,185,232",
-			"33,74,106",
-			"160px",
-			"45rem",
-			"800px",
-			"100",
-			"arguments",
-			"transition",
-			"cube",
-			"@extend",
-			"full-fixed",
-			"fixed",
-			"repeat",
-			"jQuery",
-			"$",
-			"enqueue",
-			"rgba(162,179,193,1) 63%,",
-			"rgba(255,255,255,0.38) 40%",
-			"26%",
+			"modal",
+			"third",
+			"follow",
+			"scroll",
+			"scroll more",
+			"quarter",
+			"share",
 			"	\n",
-			");\n",
-			"border-box",
-			"media",
-			"word-wrap"
+			"third",
+			"modal",
+			"transitio",
+			"trans",
+			"h3",
+			"h",
+			"background",
+			"data-stellar-ratio=\"0\"",
+			"0.1",
+			"-1\"",
+			"-1",
+			"0.5",
+			"data-stellar-ratio=\"0.001\"",
+			"0.1",
+			"\"0\"",
+			"data-stellar-ratio=\"1.2\"",
+			"0.5",
+			"stylesheet",
+			"{{",
+			"stylesheet",
+			"style",
+			"h4",
+			"sublime",
+			"History",
+			"dproudfoot@ascesismedia.com",
+			"i7753331@bournemouth.ac.uk",
+			"danielpotts@live.com",
+			"jallen@hushhairandbeauty.co.uk",
+			"dan.proudfoot.iw@gmail.com",
+			"dproudfoot@ascesismedia.com",
+			"dan.proudfoot.iw@gmail.com",
+			"5",
+			"url",
+			"hero--",
+			"waiver",
+			"vf-if",
+			"main",
+			"paul",
+			"enquiries",
+			"paul",
+			"nexmoney promise",
+			".right",
+			".left",
+			"float",
+			".menu",
+			".mennu",
+			"quarter",
+			"hero--calculator",
+			"%base_url%/guides/",
+			"+",
+			"footer-nav",
+			"#vf",
+			"fixed-",
+			"extension=",
+			"Cost Calculator",
+			"cost cal",
+			"calcu",
+			"<li",
+			"..\\",
+			"src=\"\"",
+			"service",
+			"services",
+			"he Nexmoney promise",
+			"he Nex",
+			"social-nav",
+			"options span",
+			".input-gr",
+			".input",
+			"callback-form",
+			"exclusive"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -374,6 +544,16 @@
 		"regex": false,
 		"replace_history":
 		[
+			"/about/service-guarantee",
+			" ",
+			"1rem",
+			"0845 548 0233",
+			"<a href=\"../login/clientLogin.html\">Login</a>",
+			"<a href=\"login/clientLogin.html\">Login</a>",
+			"<a href=\"login/login-client\">Login</a>",
+			"",
+			"0.875rem",
+			"0.625em"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -384,7 +564,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -393,23 +573,81 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 78,
+						"buffer_size": 2211,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								29,
-								29
+								791,
+								791
 							]
 						],
 						"settings":
 						{
-							"auto_name": "",
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
+						"translation.y": 450.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "css/queries/_base.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4109,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3027,
+								3027
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 744,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								740,
+								740
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -421,11 +659,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 28.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 37.0
 	},
 	"layout":
 	{
@@ -454,10 +692,10 @@
 	{
 		"height": 0.0
 	},
-	"project": "UI.sublime-project",
+	"project": "ui.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 58.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -466,19 +704,359 @@
 		"selected_items":
 		[
 			[
-				"res",
-				"css\\reset.css"
+				"1020",
+				"css\\queries\\_1020.scss"
+			],
+			[
+				"base",
+				"css\\queries\\_base.scss"
+			],
+			[
+				"hi",
+				"views\\page-history.twig"
+			],
+			[
+				"600",
+				"css\\queries\\_600.scss"
+			],
+			[
+				"bas",
+				"css\\queries\\_base.scss"
+			],
+			[
+				"mai",
+				"js\\main.js"
+			],
+			[
+				"desk",
+				"views\\menus\\desktop.twig"
+			],
+			[
+				"histo",
+				"views\\page-history.twig"
+			],
+			[
+				"desig",
+				"views\\page-designers.twig"
+			],
+			[
+				"menu",
+				"views\\menus\\mobile.twig"
+			],
+			[
+				"seat",
+				"views\\page-seating.twig"
+			],
+			[
+				"cont",
+				"views\\page-contact.twig"
+			],
+			[
+				"page-team",
+				"views\\page-team.twig"
+			],
+			[
+				"page",
+				"page-team.php"
+			],
+			[
+				"how",
+				"views\\page-how-we-work.twig"
+			],
+			[
+				"fro",
+				"views\\front-page.twig"
+			],
+			[
+				"history",
+				"views\\page-history.twig"
+			],
+			[
+				"foot",
+				"views\\footer.twig"
+			],
+			[
+				"10",
+				"css\\queries\\_1020.scss"
+			],
+			[
+				"front",
+				"views\\front-page.twig"
+			],
+			[
+				"fron",
+				"front-page.php"
+			],
+			[
+				"conta",
+				"views\\page-contact.twig"
+			],
+			[
+				"histor",
+				"views\\page-history.twig"
+			],
+			[
+				"main",
+				"js\\main.js"
+			],
+			[
+				"his",
+				"views\\page-history.twig"
+			],
+			[
+				"desi",
+				"views\\page-designers.twig"
+			],
+			[
+				"fu",
+				"functions.php"
+			],
+			[
+				"ma",
+				"js\\main.js"
+			],
+			[
+				"design",
+				"views\\page-designers.twig"
+			],
+			[
+				"team",
+				"views\\page-team.twig"
+			],
+			[
+				"client",
+				"views\\page-our-clients.twig"
+			],
+			[
+				"102",
+				"css\\queries\\_1020.scss"
+			],
+			[
+				"hist",
+				"views\\page-history.twig"
+			],
+			[
+				"func",
+				"functions.php"
+			],
+			[
+				"clin",
+				"views\\page-our-clients.twig"
+			],
+			[
+				"faq",
+				"views\\single-faq.twig"
+			],
+			[
+				"fun",
+				"functions.php"
+			],
+			[
+				"for",
+				"views\\front-page.twig"
+			],
+			[
+				"designer",
+				"views\\page-designers.twig"
+			],
+			[
+				"dei",
+				"page-designers.php"
+			],
+			[
+				"header",
+				"views\\header.twig"
+			],
+			[
+				"fornt",
+				"views\\front-page.twig"
+			],
+			[
+				"proc",
+				"themes\\nexmoney\\process.php"
+			],
+			[
+				"7",
+				"themes\\nexmoney\\css\\queries\\768.less"
+			],
+			[
+				"services",
+				"content\\services\\index.md"
+			],
+			[
+				"recy",
+				"content\\mortgaging\\recycle.md"
+			],
+			[
+				"guid",
+				"themes\\nexmoney\\submenus\\guide.html"
+			],
+			[
+				"testi",
+				"content\\testimonials.md"
+			],
+			[
+				"pro",
+				"content\\about\\promise.md"
+			],
+			[
+				"76",
+				"themes\\nexmoney\\css\\queries\\768.less"
+			],
+			[
+				"hea",
+				"themes\\nexmoney\\header.html"
+			],
+			[
+				"usefl",
+				"content\\useful-links.md"
+			],
+			[
+				"excl",
+				"content\\exclusives.md"
+			],
+			[
+				"contact",
+				"themes\\nexmoney\\contact.html"
+			],
+			[
+				"tes",
+				"content\\testimonials.md"
+			],
+			[
+				"rec",
+				"content\\mortgaging\\recycle.md"
+			],
+			[
+				"mobile",
+				"themes\\nexmoney\\menus\\mobile.html"
+			],
+			[
+				"promise",
+				"content\\about\\promise.md"
+			],
+			[
+				"partner",
+				"content\\about\\introducers-partners.md"
+			],
+			[
+				"promis",
+				"content\\about\\promise.md"
+			],
+			[
+				"share",
+				"content\\about\\share-the-love.md"
+			],
+			[
+				"service",
+				"content\\about\\service-guarantee.md"
+			],
+			[
+				"calc",
+				"content\\calculators\\index.md"
+			],
+			[
+				"768",
+				"themes\\nexmoney\\css\\queries\\768.less"
+			],
+			[
+				"testim",
+				"content\\testimonials.md"
+			],
+			[
+				"contac",
+				"content\\contact.md"
+			],
+			[
+				"forum",
+				"content\\forum.md"
+			],
+			[
+				"about",
+				"content\\about\\index.md"
+			],
+			[
+				"rent",
+				"content\\calculators\\rent.md"
+			],
+			[
+				"guides",
+				"content\\guides\\index.md"
+			],
+			[
+				"home",
+				"themes\\nexmoney\\homepage.html"
+			],
+			[
+				"tem",
+				"content\\testimonials.md"
+			],
+			[
+				"mortgages.",
+				"themes\\nexmoney\\submenus\\mortgages.html"
+			],
+			[
+				"mortga",
+				"content\\mortgaging\\remortgaging.md"
+			],
+			[
+				"buy",
+				"content\\guides\\buy-to-let.md"
+			],
+			[
+				"remor",
+				"content\\guides\\remortgaging.md"
+			],
+			[
+				"apply",
+				"content\\guides\\apply-mortgage.md"
+			],
+			[
+				"house",
+				"content\\guides\\house-buying.md"
+			],
+			[
+				"guide",
+				"themes\\nexmoney\\submenus\\guide.html"
+			],
+			[
+				"homepa",
+				"themes\\nexmoney\\homepage.html"
+			],
+			[
+				"borro",
+				"content\\calculators\\borrow.md"
+			],
+			[
+				"test",
+				"content\\testimonials.md"
+			],
+			[
+				"convey",
+				"content\\other-services\\conveyancing.md"
+			],
+			[
+				"help",
+				"content\\mortgaging\\help-to-buy-1.md"
+			],
+			[
+				"mort",
+				"content\\protection\\mortgage-protection.md"
 			]
 		],
 		"width": 0.0
 	},
 	"select_project":
 	{
-		"height": 500.0,
+		"height": 750.0,
 		"selected_items":
 		[
+			[
+				"",
+				"C:\\wamp\\www\\nexmoney\\nexmoney.sublime-project"
+			]
 		],
-		"width": 462.0
+		"width": 570.0
 	},
 	"select_symbol":
 	{
@@ -493,10 +1071,10 @@
 	{
 	},
 	"show_minimap": true,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 227.0,
+	"side_bar_width": 305.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
