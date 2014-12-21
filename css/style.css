@@ -94,6 +94,9 @@ h6 {
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
 
+.float-left {
+  float: left; }
+
 header {
   background: #04d9d9;
   /* Old browsers */
@@ -106,7 +109,7 @@ header {
   background: linear-gradient(to right, #04d9d9 0%, #bcd952 100%);
   /* W3C */
   width: 100%;
-  height: 4rem;
+  height: 3rem;
   position: fixed;
   z-index: 20;
   align-items: center;
@@ -116,11 +119,11 @@ header {
   header .icon-magnifying-glass:before {
     position: absolute;
     margin: 0.5rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #c6c6c6; }
   header input {
-    font-size: 1.5rem;
-    padding: 0.5rem 0.5rem 0.5rem 3rem;
+    font-size: 1.3rem;
+    padding: 0.3rem 0.3rem 0.3rem 3rem;
     border: none;
     width: 40rem;
     font-family: "Roboto", sans-serif;
@@ -149,7 +152,7 @@ header {
   left: 0;
   top: 0;
   z-index: 30;
-  padding: 4rem 0;
+  padding: 3rem 0;
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
@@ -183,22 +186,38 @@ header {
   left: 0;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem; }
+  padding: 0 2rem;
+  z-index: 20; }
   .control_bar.pad-left {
     padding-left: 16rem; }
-  .control_bar .now_playing .cover_holder {
-    padding: 6px;
-    margin-bottom: 6rem;
-    width: 166px; }
-    .control_bar .now_playing .cover_holder img {
-      width: 100%;
-      height: auto;
-      pointer-events: none; }
-  .control_bar .controls .btn-control {
-    font-size: 3.5rem;
-    color: #c6c6c6;
-    float: left;
-    padding: 0 1rem; }
+  .control_bar .now_playing {
+    align-items: flex-end;
+    align-self: flex-end;
+    height: 0;
+    width: 60%;
+    margin-bottom: 1rem; }
+    .control_bar .now_playing .float-left {
+      margin-left: 1rem;
+      width: calc(100% - 166px - 1rem); }
+      .control_bar .now_playing .float-left h5 {
+        color: white; }
+    .control_bar .now_playing .cover_holder {
+      padding: 6px;
+      width: 128px;
+      float: left; }
+      .control_bar .now_playing .cover_holder img {
+        width: 100%;
+        height: auto;
+        pointer-events: none; }
+  .control_bar .controls {
+    width: 40%;
+    justify-content: center;
+    align-items: center; }
+    .control_bar .controls .btn-control {
+      font-size: 3.5rem;
+      color: #c6c6c6;
+      float: left;
+      padding: 0 1rem; }
   .control_bar .vol input[type=range] {
     -webkit-appearance: none;
     width: 100%;
@@ -292,7 +311,8 @@ header {
   /* No support for these yet, use at own risk */
   -o-user-select: none;
   user-select: none;
-  cursor: pointer; }
+  cursor: pointer;
+  padding-bottom: 0.5rem; }
   .album_link .cover_holder {
     padding: 10px;
     margin-bottom: 1rem; }
@@ -305,8 +325,7 @@ header {
     -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
-    background: #f0f0f0;
-    padding-bottom: 0.5rem; }
+    background: #f0f0f0; }
     .album_link:active h5, .album_link:active h6 {
       padding: 0 0.5rem; }
     .album_link:active .cover_holder {
@@ -317,9 +336,9 @@ header {
 
 .menu_btn {
   position: fixed;
-  top: 1rem;
+  top: 0.5rem;
   left: 2rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: white;
   z-index: 40; }
 
@@ -339,6 +358,9 @@ header {
   .playlist.active {
     width: 80vh;
     height: 80vh; }
+
+.modal {
+  background: #f0f0f0; }
 
 .grad_bg-1 {
   background-image: -moz-linear-gradient(45deg, rgba(4, 217, 217, 0.4) 0%, rgba(188, 217, 82, 0.4) 100%);

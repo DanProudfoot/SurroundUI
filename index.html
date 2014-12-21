@@ -11,7 +11,6 @@
 		<div class="search icon-magnifying-glass">
 			<input class="shadow " type="text" placeholder="Find some music!">
 		</div>
-		<div class="border_bottom"></div>
 	</header>
 
 	<section class="sidebar">
@@ -24,19 +23,23 @@
 	</section>
 
 	<section class="control_bar flex">
-		<div class="now_playing">
+		<div class="now_playing flex">
 			<div class="cover_holder"><img src="img/sw.png" alt=""></div>
-			<h5>The Raven that Refused to Sing</h5>
-			<h6>Steven Wilson</h6>
+			<div class="float-left">
+				<h5>The Watchmaker</h5>
+				<h6>The Raven that Refused to Sing - Steven Wilson</h6>
+			</div>
 		</div>
-		<div class="controls">
+		<div class="controls flex">
+			<div class="vol">
+				<input type="range">
+			</div>
+
 			<div class="btn-control icon-previous"></div>
 			<div class="btn-control icon-play"></div>
-			<div class="btn-control icon-previous"></div>
+			<div class="btn-control icon-next"></div>
 		</div>
-		<div class="vol">
-			<input type="range">
-		</div>
+		
 	</section>
 
 	<section class="playlist">
@@ -88,6 +91,21 @@
 			</div>
 		</div>
 	</section>
+	<div class="modal album_modal">
+		<div class="modal_art"></div>
+		<h2>Steven Wilson</h2>
+		<h3>The Raven that Refused to Sing</h3>
+		<div class="song_list">
+			<ul>
+				<li>Luminol</li>
+				<li>Drive Home</li>
+				<li>The Holy Drinker</li>
+				<li>The Pin Drop</li>
+				<li>The Watchmaker</li>
+				<li>The Raven that Refused to Sing</li>
+			</ul>
+		</div>
+	</div>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="js/main.js"></script>
 </body>

@@ -33,4 +33,10 @@ jQuery(document).ready(function($) {
 		$(this).toggleClass('active');
 	});
 
+	var albumLink = $('.album_link');
+
+	albumLink.mouseup(function(){
+		$(this).append($('.album_modal'));
+	});
+
 });
