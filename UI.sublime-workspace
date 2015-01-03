@@ -4,8 +4,52 @@
 		"selected_items":
 		[
 			[
+				"audi",
+				"audioTrack"
+			],
+			[
+				"au",
+				"audioPlay"
+			],
+			[
+				"aud",
+				"audioTrack"
+			],
+			[
+				"audio",
+				"audioPlay"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"l",
+				"l_grey"
+			],
+			[
+				"fl",
+				"fl	float: ${1:left};"
+			],
+			[
+				"album",
+				"albumLink"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"m",
+				"m_grey"
+			],
+			[
 				"pad",
-				"padding-bottom"
+				"padding"
 			],
 			[
 				"contro",
@@ -14,10 +58,6 @@
 			[
 				"main",
 				"maniView"
-			],
-			[
-				"padd",
-				"padding-left"
 			],
 			[
 				"max",
@@ -30,10 +70,6 @@
 			[
 				"backg",
 				"background"
-			],
-			[
-				"l",
-				"l_purple"
 			],
 			[
 				"hr",
@@ -92,10 +128,6 @@
 				"background-size"
 			],
 			[
-				"margin",
-				"margin"
-			],
-			[
 				"cl",
 				"click"
 			],
@@ -148,10 +180,6 @@
 				"display"
 			],
 			[
-				"font",
-				"font-size"
-			],
-			[
 				"pa",
 				"padding"
 			],
@@ -167,7 +195,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 2211,
+				"buffer_size": 3231,
 				"line_ending": "Windows"
 			}
 		},
@@ -175,15 +203,18 @@
 			"file": "css/queries/_base.scss",
 			"settings":
 			{
-				"buffer_size": 4109,
+				"buffer_size": 10294,
 				"line_ending": "Windows"
 			}
 		},
 		{
+			"contents": "jQuery(document).ready(function($) {\n\n	var coverHolder = $('.cover_holder');\n	var coverColours = [1,2,3,4,5,6,7,8];\n	var sidebar = $('.sidebar');\n	var menuBtn = $('.menu_btn');\n	var mainView = $('.main_view');\n	var header = $('header');\n	var search = $('.search_box');\n	var controlBar = $('.control_bar');\n	var playlist = $('.playlist');\n	var albumLink = $('.album_link');\n	var overlay = $('.overlay');\n	var overlayInside = $('.overlay_inside');\n\n\n	function rand(){\n		return(\n			Math.floor(Math.random() * 8));\n	};\n\n	coverHolder.each(function(){\n		$(this).addClass('grad_bg-' + coverColours[rand()]);\n	});\n\n	menuBtn.on('touchend click', function(e){\n		sidebar.toggleClass('open');\n		mainView.toggleClass('pad-left');\n		header.toggleClass('pad-left');\n		controlBar.toggleClass('pad-left');\n	});\n\n	playlist.on('touchend click', function(e){\n		$(this).toggleClass('active');\n	});\n\n	albumLink.mouseup(function(){\n		overlay.addClass('visible');\n	});\n\n	overlayInside.on('click touchend', function(){\n		overlay.removeClass('visible');\n		$('.album_modal').removeClass('visible');\n	});\n\n	search.on('focus', function(){\n		console.log('focused!');\n	})\n\n\n\n	var audioTrack = new Audio('The Watchmaker.mp3');\n	var audioPlay = false;\n\n	$('.icon-play').on('click touchend', function(){\n\n		if (!audioPlay) {\n			audioTrack.play();\n			audioPlay = true;\n		} else if (audioPlay) {\n			audioTrack.pause();\n			audioPlay = false;\n		}	\n	});\n\n	$(\"#seek\").on(\"change\", function() {\n        audioTrack.currentTime = $(this).val();\n        $(\"#seek\").attr(\"max\", audioTrack.duration);\n    });\n\n    audioTrack.addEventListener('timeupdate',function (){\n    curtime = parseInt(audioTrack.currentTime, 10);\n        $(\"#seek\").attr(\"value\", curtime);\n    });\n\n});",
 			"file": "js/main.js",
+			"file_size": 1803,
+			"file_write_time": 130638529196175155,
 			"settings":
 			{
-				"buffer_size": 744,
+				"buffer_size": 1729,
 				"line_ending": "Windows"
 			}
 		}
@@ -255,6 +286,7 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Dan/Desktop/src/js/html5slider.js",
 		"/C/Users/Dan/AppData/Local/Temp/Temp1_DragDropInteractions.zip/DragDropInteractions/README.md",
 		"/C/Users/Dan/Documents/GitHub/SurroundUI/css/style.scss",
 		"/C/wamp/www/craftwood/wp-content/themes/craftwood/css/queries/_1020.scss",
@@ -381,12 +413,11 @@
 		"/C/wamp/www/nexmoney/themes/nexmoney/js/Calculator_Rent.js",
 		"/C/wamp/www/nexmoney/themes/nexmoney/js/Calculator_Cost.js",
 		"/C/wamp/www/nexmoney/themes/nexmoney/js/Calculator_Borrow.js",
-		"/C/wamp/www/nexmoney/themes/nexmoney/js/Calculator.js",
-		"/C/wamp/www/nexmoney/themes/nexmoney/calculator.html"
+		"/C/wamp/www/nexmoney/themes/nexmoney/js/Calculator.js"
 	],
 	"find":
 	{
-		"height": 31.0
+		"height": 50.0
 	},
 	"find_in_files":
 	{
@@ -409,6 +440,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"song",
+			" box-shadow: 0px 0px 1px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);",
+			"5",
+			"#00ffff",
+			"12px",
+			"0.5",
 			"250px",
 			"stewart",
 			"andy",
@@ -530,13 +567,7 @@
 			"service",
 			"services",
 			"he Nexmoney promise",
-			"he Nex",
-			"social-nav",
-			"options span",
-			".input-gr",
-			".input",
-			"callback-form",
-			"exclusive"
+			"he Nex"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -573,15 +604,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2211,
+						"buffer_size": 3231,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								791,
-								791
+								258,
+								248
 							]
 						],
 						"settings":
@@ -590,7 +621,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 450.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -602,15 +633,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4109,
+						"buffer_size": 10294,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3027,
-								3027
+								4687,
+								4687
 							]
 						],
 						"settings":
@@ -619,7 +650,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3180.0,
+						"translation.y": 3545.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -631,15 +662,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 744,
+						"buffer_size": 1729,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								740,
-								740
+								1136,
+								1136
 							]
 						],
 						"settings":
@@ -647,8 +678,8 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
+						"translation.x": 0.0,
+						"translation.y": 330.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -659,7 +690,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 30.0
 	},
 	"input":
 	{

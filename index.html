@@ -5,13 +5,41 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="menu_btn icon-list"></div>
+	
 
-	<header class="shadow flex">
+	<header class="flex">
+		<div class="menu_btn icon-list"></div>
 		<div class="search icon-magnifying-glass">
-			<input class="shadow " type="text" placeholder="Find some music!">
+			<input class="shadow search_box" type="text" placeholder="Find some music!">
 		</div>
 	</header>
+
+	<div class="search_modal shadow">
+		<h1></h1>
+		<div class="searched_for flex">
+			<div class="album_link">
+				<div class="cover_holder"><img src="img/placeholder.png" alt=""></div>
+				<h5>Placeholder Name</h5>
+				<h6>Placeholder artist</h6>
+			</div>
+			<div class="album_link">
+				<div class="cover_holder"><img src="img/placeholder.png" alt=""></div>
+				<h5>Placeholder Name</h5>
+				<h6>Placeholder artist</h6>
+			</div>
+			<div class="album_link">
+				<div class="cover_holder"><img src="img/placeholder.png" alt=""></div>
+				<h5>Placeholder Name</h5>
+				<h6>Placeholder artist</h6>
+			</div>
+			<div class="album_link">
+				<div class="cover_holder"><img src="img/placeholder.png" alt=""></div>
+				<h5>Placeholder Name</h5>
+				<h6>Placeholder artist</h6>
+			</div>
+		</div>
+	</div>
+	<div class="overlay"></div>
 
 	<section class="sidebar">
 		<ul>
@@ -23,6 +51,10 @@
 	</section>
 
 	<section class="control_bar flex">
+		<div class="seek">
+			<input type="range" id="seek" value="0" max="">
+		</div>
+
 		<div class="now_playing flex">
 			<div class="cover_holder"><img src="img/sw.png" alt=""></div>
 			<div class="float-left">
@@ -31,6 +63,9 @@
 			</div>
 		</div>
 		<div class="controls flex">
+			<div class="seek_time">	
+				<p>3:10 / 6:22</p>
+			</div>
 			<div class="vol">
 				<input type="range">
 			</div>
@@ -89,10 +124,31 @@
 				<h5>Moving Pictures</h5>
 				<h6>Rush</h6>
 			</div>
+			<div class="album_link">
+				<div class="cover_holder"><img src="img/placeholder.png" alt=""></div>
+				<h5>Placeholder Name</h5>
+				<h6>Placeholder artist</h6>
+			</div>
+			<div class="album_link">
+				<div class="cover_holder"><img src="img/placeholder.png" alt=""></div>
+				<h5>Placeholder Name</h5>
+				<h6>Placeholder artist</h6>
+			</div>
+			<div class="album_link">
+				<div class="cover_holder"><img src="img/placeholder.png" alt=""></div>
+				<h5>Placeholder Name</h5>
+				<h6>Placeholder artist</h6>
+			</div>
+			<div class="album_link">
+				<div class="cover_holder"><img src="img/placeholder.png" alt=""></div>
+				<h5>Placeholder Name</h5>
+				<h6>Placeholder artist</h6>
+			</div>
 		</div>
 	</section>
-	<div class="modal album_modal">
-		<div class="modal_art"></div>
+	
+	<div class="modal album_modal flex">
+		<div class="modal_art"><img src="img/sw.png" alt=""></div>
 		<h2>Steven Wilson</h2>
 		<h3>The Raven that Refused to Sing</h3>
 		<div class="song_list">
@@ -106,7 +162,8 @@
 			</ul>
 		</div>
 	</div>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+	<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

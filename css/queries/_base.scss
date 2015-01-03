@@ -19,6 +19,12 @@ h1{
 	font-size: 3rem;
 	padding: 1rem 0 1rem;
 }
+h2{
+	font-size: 2rem;
+}
+h3{
+	font-size: 1.5rem;
+}
 h5{
 	font-size: 1rem;
 	font-weight: 500;
@@ -29,10 +35,14 @@ h6{
 	font-weight: 300;
 	color: $m_grey;
 }
+p,li{
+	font-family: $roboto;
+	font-weight: 500;
+}
 
 
 .shadow{
-	box-shadow: rgba(102, 102, 102, 0.65) 0 3px 7px;
+	box-shadow: rgba(0, 0, 0, 0.29) 0 3px 10px;
 }
 
 .flex{
@@ -49,23 +59,36 @@ h6{
 	float: left;
 }
 
+.overlay{
+	width: 100vw;
+	height: 100vw;
+	position: fixed;
+	top: -50%;
+	left: 0;
+	visibility: hidden;
+	@extend .transition;
+	background: rgba(black,0.7);
+	@include transform(scale(0));
+	border-radius: 50%;
+	z-index: 25;
+
+	&.visible{
+		visibility: visible;
+		opacity: 1;
+		@include transform(scale(2));
+	}
+}
+
 header{
 	background: $blue; /* Old browsers */
-	background: -moz-linear-gradient(left,  $blue 0%, $green 100%); /* FF3.6+ */
-	background: -webkit-linear-gradient(left,  $blue 0%,$green 100%); /* Chrome10+,Safari5.1+ */
-	background: -ms-linear-gradient(left,  $blue 0%,$green 100%); /* IE10+ */
-	background: linear-gradient(to right,  $blue 0%,$green 100%); /* W3C */
 	width: 100%;
-	height: 3rem;
+	//height: 3rem;
 	position: fixed;
-	z-index: 20;
+	z-index: 30;
 	align-items: center;
 	justify-content: center;
+	padding: 0.5rem 0;
 	@extend .transition;
-
-	&.pad-left{
-		padding-left: 14rem;
-	}
 
 	.icon-magnifying-glass:before{
 		position: absolute;
@@ -74,27 +97,45 @@ header{
 		color: $m_grey;
 	}
 
-	input{
+	.search_box{
 		font-size: 1.3rem;
 		padding: 0.3rem 0.3rem 0.3rem 3rem;
 		border: none;
 		width: 40rem;
 		font-family: $roboto;
 		font-weight: 300;
-		
+		@extend .transition;
+
+		&.focused{
+			font-size: 1.7rem;
+			padding: 0.5rem 0.5rem 0.5rem 3rem;
+		}
 	}
 
-	.border_bottom{
-		height: 4px;
-		width: 100%;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		background: -moz-linear-gradient(right,  $blue 0%, $green 100%); /* FF3.6+ */
-		background: -webkit-linear-gradient(right,  $blue 0%,$green 100%); /* Chrome10+,Safari5.1+ */
-		background: -ms-linear-gradient(right,  $blue 0%,$green 100%); /* IE10+ */
-		background: linear-gradient(to left,  $blue 0%,$green 100%); /* W3C */
+}
+
+.search_modal{
+	position: fixed;
+	top: 0;
+	width: 80vw;
+	margin: 0 10vw;
+	padding: 5rem 1rem;
+	background: white;
+	@include transform(translateY(-100%));
+	@extend .transition;
+	z-index: 29;
+
+	&.open{
+		@include transform(translateY(0%));
 	}
+
+	.searched_for{
+		justify-content: center;
+	}
+}
+
+.search_overlay{
+	z-index: 25;
 }
 
 .sidebar{
@@ -105,8 +146,8 @@ header{
 	position: fixed;
 	left: 0;
 	top: 0;
-	z-index: 30;
-	padding: 3rem 0;
+	z-index: 10;
+	padding: 4rem 0;
 	@include transform(translateX(-100%));
 	@extend .transition;
 
@@ -154,6 +195,95 @@ header{
 		padding-left: 16rem;
 	}
 
+	.seek{
+		width: calc(100% - 2rem);
+		position: absolute;
+		top: -9px;
+		padding: 0 0 0 9rem;
+
+		input[type=range] {
+		  -webkit-appearance: none;
+		  width: 100%;
+		  margin: 7.35px 0;
+		}
+		input[type=range]:focus {
+		  outline: none;
+		}
+		input[type=range]::-webkit-slider-runnable-track {
+		  width: 100%;
+		  height: 4.3px;
+		  cursor: pointer;
+		  background: #4dc1b1;
+		  border-radius: 13.5px;
+		  border: 0px solid rgba(1, 1, 1, 0);
+		}
+		input[type=range]::-webkit-slider-thumb {
+		  box-shadow: 0.9px 0.9px 3.5px #000000, 0px 0px 0.9px #0d0d0d;
+		  border: 3.8px solid rgba(0, 0, 0, 0);
+		  height: 19px;
+		  width: 19px;
+		  border-radius: 25px;
+		  background: #6b6cff;
+		  cursor: pointer;
+		  -webkit-appearance: none;
+		  margin-top: -7.35px;
+		}
+		input[type=range]:focus::-webkit-slider-runnable-track {
+		  background: #55c4b4;
+		}
+		input[type=range]::-moz-range-track {
+		  width: 100%;
+		  height: 4.3px;
+		  cursor: pointer;
+		  background: #4dc1b1;
+		  border-radius: 13.5px;
+		  border: 0px solid rgba(1, 1, 1, 0);
+		}
+		input[type=range]::-moz-range-thumb {
+		  box-shadow: 0.9px 0.9px 3.5px #000000, 0px 0px 0.9px #0d0d0d;
+		  border: 3.8px solid rgba(0, 0, 0, 0);
+		  height: 19px;
+		  width: 19px;
+		  border-radius: 25px;
+		  background: #6b6cff;
+		  cursor: pointer;
+		}
+		input[type=range]::-ms-track {
+		  width: 100%;
+		  height: 4.3px;
+		  cursor: pointer;
+		  background: transparent;
+		  border-color: transparent;
+		  color: transparent;
+		}
+		input[type=range]::-ms-fill-lower {
+		  background: #45beae;
+		  border: 0px solid rgba(1, 1, 1, 0);
+		  border-radius: 27px;
+		}
+		input[type=range]::-ms-fill-upper {
+		  background: #4dc1b1;
+		  border: 0px solid rgba(1, 1, 1, 0);
+		  border-radius: 27px;
+		}
+		input[type=range]::-ms-thumb {
+		  box-shadow: 0.9px 0.9px 3.5px #000000, 0px 0px 0.9px #0d0d0d;
+		  border: 3.8px solid rgba(0, 0, 0, 0);
+		  height: 19px;
+		  width: 19px;
+		  border-radius: 25px;
+		  background: #6b6cff;
+		  cursor: pointer;
+		  height: 4.3px;
+		}
+		input[type=range]:focus::-ms-fill-lower {
+		  background: #4dc1b1;
+		}
+		input[type=range]:focus::-ms-fill-upper {
+		  background: #55c4b4;
+		}
+	}
+
 	.now_playing{
 		align-items: flex-end;
 		align-self: flex-end;
@@ -172,7 +302,7 @@ header{
 
 		.cover_holder{
 			padding: 6px;
-			@extend .shadow;
+			//@extend .shadow;
 			width: 128px;
 			float: left;
 			
@@ -189,16 +319,21 @@ header{
 		width: 40%;
 		justify-content: center;
 		align-items: center;
+		
 
 		.btn-control{
-			font-size: 3.5rem;
+			font-size: 3rem;
 			color: $m_grey;
 			float: left;
-			padding: 0 1rem;
+			padding: 0 0.5rem;
+			height: 2.4rem;
 		}
 	}
 
 	.vol{
+
+		margin: 0 1rem; 
+
 		input[type=range] {
 		  -webkit-appearance: none;
 		  width: 100%;
@@ -292,27 +427,32 @@ header{
 	width: 100%;
 	@extend .transition;
 
-	.reccd{
-		justify-content: flex-start;
-	}
+	
 
 	&.pad-left{
 		padding-left: calc(14rem + 1rem);
 	}
 }
 
+.reccd{
+		justify-content: flex-start;
+	}
+
 .album_link{
 	width: 200px;
 	margin: 1rem;
 	@extend .transition;
 	-webkit-user-select: none;  /* Chrome all / Safari all */
- 	-moz-user-select: none;     /* Firefox all */
- 	-ms-user-select: none;      /* IE 10+ */
- 	/* No support for these yet, use at own risk */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	/* No support for these yet, use at own risk */
 	-o-user-select: none;
 	user-select: none;  
 	cursor: pointer;
 	padding-bottom: 0.5rem;
+	@include transform(translateY(20%));
+	opacity: 0;
+	visibility: hidden;
 
 	h5,h6{
 		@extend .transition;
@@ -320,7 +460,7 @@ header{
 
 	.cover_holder{
 		padding: 10px;
-		@extend .shadow;
+		//@extend .shadow;
 		margin-bottom: 1rem;
 		@extend .transition;
 
@@ -331,9 +471,15 @@ header{
 		}
 	}
 
+	&.on-screen{
+		@include transform(translateY(0%));
+		opacity: 1;
+		visibility: visible;
+	}
+
 	&:active{
 		@include transform(scale(1.2));
-		background: $l_grey;
+		background: $l_grey;		
 		@extend .shadow;
 		
 
@@ -371,7 +517,7 @@ header{
 	width: 20vh;
 	border-radius: 50%;
 	background: $d_grey;
-	z-index: 40;
+	z-index: 20;
 	@include transform(translateX(50%) translateY(-50%));
 	@extend .transition;
 
@@ -381,11 +527,28 @@ header{
 	}
 }
 
-.modal{
-	
+.album_modal{
 	background: $l_grey;
-}
+	position: fixed;
+	z-index: 60;
+	visibility: hidden;
+	opacity: 0;
+	@include transform(translateY(20%));
+	top: 0;
+	@extend .transition;
 
+	.modal_art{
+		//position: absolute;
+		left: 0;
+	}
+
+	&.visible{
+		visibility: visible;
+		opacity: 1;
+		@include transform(translateY(0));
+	}
+
+}
 
 .grad_bg-1{
 	@include gradient(45deg, rgba($blue,0.4), rgba($green,0.4));
