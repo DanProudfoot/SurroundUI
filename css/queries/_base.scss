@@ -311,6 +311,7 @@ header{
 				width: 100%;
 				height: auto;
 				pointer-events: none;
+				display: block;
 			}
 		}
 	}
@@ -435,12 +436,13 @@ header{
 }
 
 .reccd{
-		justify-content: flex-start;
+		justify-content: space-between;
+		padding-bottom: 4rem;
 	}
 
 .album_link{
-	width: 200px;
-	margin: 1rem;
+	width: 166px;
+	margin: 0.5rem 1rem;
 	@extend .transition;
 	-webkit-user-select: none;  /* Chrome all / Safari all */
 	-moz-user-select: none;     /* Firefox all */
@@ -453,14 +455,15 @@ header{
 	@include transform(translateY(20%));
 	opacity: 0;
 	visibility: hidden;
+	position: relative;
+	z-index: 5;
 
 	h5,h6{
 		@extend .transition;
 	}
 
 	.cover_holder{
-		padding: 10px;
-		//@extend .shadow;
+		padding: 8px;
 		margin-bottom: 1rem;
 		@extend .transition;
 
@@ -468,6 +471,7 @@ header{
 			width: 100%;
 			height: auto;
 			pointer-events: none;
+			display: block;
 		}
 	}
 
@@ -481,6 +485,7 @@ header{
 		@include transform(scale(1.2));
 		background: $l_grey;		
 		@extend .shadow;
+		z-index: 6;
 		
 
 		h5,h6{

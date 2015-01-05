@@ -315,7 +315,8 @@ header {
       .control_bar .now_playing .cover_holder img {
         width: 100%;
         height: auto;
-        pointer-events: none; }
+        pointer-events: none;
+        display: block; }
   .control_bar .controls {
     width: 40%;
     justify-content: center;
@@ -408,11 +409,12 @@ header {
     padding-left: calc(14rem + 1rem); }
 
 .reccd {
-  justify-content: flex-start; }
+  justify-content: space-between;
+  padding-bottom: 4rem; }
 
 .album_link {
-  width: 200px;
-  margin: 1rem;
+  width: 166px;
+  margin: 0.5rem 1rem;
   -webkit-user-select: none;
   /* Chrome all / Safari all */
   -moz-user-select: none;
@@ -429,14 +431,17 @@ header {
   -ms-transform: translateY(20%);
   transform: translateY(20%);
   opacity: 0;
-  visibility: hidden; }
+  visibility: hidden;
+  position: relative;
+  z-index: 5; }
   .album_link .cover_holder {
-    padding: 10px;
+    padding: 8px;
     margin-bottom: 1rem; }
     .album_link .cover_holder img {
       width: 100%;
       height: auto;
-      pointer-events: none; }
+      pointer-events: none;
+      display: block; }
   .album_link.on-screen {
     -webkit-transform: translateY(0%);
     -moz-transform: translateY(0%);
@@ -449,7 +454,8 @@ header {
     -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
-    background: #f0f0f0; }
+    background: #f0f0f0;
+    z-index: 6; }
     .album_link:active h5, .album_link:active h6 {
       padding: 0 0.5rem; }
     .album_link:active .cover_holder {

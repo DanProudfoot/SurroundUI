@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"con",
+				"contChildren"
+			],
+			[
+				"offs",
+				"offsetWidth"
+			],
+			[
+				"pa",
+				"padding-bottom"
+			],
+			[
+				"on",
+				"onScreen"
+			],
+			[
+				"sear",
+				"search_overlay"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"margi",
+				"margin"
+			],
+			[
 				"audi",
 				"audioTrack"
 			],
@@ -18,10 +50,6 @@
 			[
 				"audio",
 				"audioPlay"
-			],
-			[
-				"font",
-				"font-weight"
 			],
 			[
 				"padd",
@@ -180,10 +208,6 @@
 				"display"
 			],
 			[
-				"pa",
-				"padding"
-			],
-			[
 				"head",
 				"header	Tag"
 			]
@@ -195,7 +219,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 3231,
+				"buffer_size": 4598,
 				"line_ending": "Windows"
 			}
 		},
@@ -203,18 +227,7 @@
 			"file": "css/queries/_base.scss",
 			"settings":
 			{
-				"buffer_size": 10294,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "jQuery(document).ready(function($) {\n\n	var coverHolder = $('.cover_holder');\n	var coverColours = [1,2,3,4,5,6,7,8];\n	var sidebar = $('.sidebar');\n	var menuBtn = $('.menu_btn');\n	var mainView = $('.main_view');\n	var header = $('header');\n	var search = $('.search_box');\n	var controlBar = $('.control_bar');\n	var playlist = $('.playlist');\n	var albumLink = $('.album_link');\n	var overlay = $('.overlay');\n	var overlayInside = $('.overlay_inside');\n\n\n	function rand(){\n		return(\n			Math.floor(Math.random() * 8));\n	};\n\n	coverHolder.each(function(){\n		$(this).addClass('grad_bg-' + coverColours[rand()]);\n	});\n\n	menuBtn.on('touchend click', function(e){\n		sidebar.toggleClass('open');\n		mainView.toggleClass('pad-left');\n		header.toggleClass('pad-left');\n		controlBar.toggleClass('pad-left');\n	});\n\n	playlist.on('touchend click', function(e){\n		$(this).toggleClass('active');\n	});\n\n	albumLink.mouseup(function(){\n		overlay.addClass('visible');\n	});\n\n	overlayInside.on('click touchend', function(){\n		overlay.removeClass('visible');\n		$('.album_modal').removeClass('visible');\n	});\n\n	search.on('focus', function(){\n		console.log('focused!');\n	})\n\n\n\n	var audioTrack = new Audio('The Watchmaker.mp3');\n	var audioPlay = false;\n\n	$('.icon-play').on('click touchend', function(){\n\n		if (!audioPlay) {\n			audioTrack.play();\n			audioPlay = true;\n		} else if (audioPlay) {\n			audioTrack.pause();\n			audioPlay = false;\n		}	\n	});\n\n	$(\"#seek\").on(\"change\", function() {\n        audioTrack.currentTime = $(this).val();\n        $(\"#seek\").attr(\"max\", audioTrack.duration);\n    });\n\n    audioTrack.addEventListener('timeupdate',function (){\n    curtime = parseInt(audioTrack.currentTime, 10);\n        $(\"#seek\").attr(\"value\", curtime);\n    });\n\n});",
-			"file": "js/main.js",
-			"file_size": 1803,
-			"file_write_time": 130638529196175155,
-			"settings":
-			{
-				"buffer_size": 1729,
+				"buffer_size": 10409,
 				"line_ending": "Windows"
 			}
 		}
@@ -222,9 +235,17 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 486.0,
+		"height": 567.0,
 		"selected_items":
 		[
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"packa",
+				"Package Control: Disable Package"
+			],
 			[
 				"uri",
 				"Package Control: Upgrade/Overwrite All Packages"
@@ -252,13 +273,9 @@
 			[
 				"instal",
 				"Package Control: Install Package"
-			],
-			[
-				"Package Control: ",
-				"Package Control: Install Package"
 			]
 		],
-		"width": 640.0
+		"width": 600.0
 	},
 	"console":
 	{
@@ -286,6 +303,9 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Dan/Documents/GitHub/SurroundUI/js/main.js",
+		"/C/Users/Dan/Documents/GitHub/experiments/delay animation/js/main.js",
+		"/C/Users/Dan/AppData/Roaming/Sublime Text 3/Packages/Git/Git.sublime-settings",
 		"/C/Users/Dan/Desktop/src/js/html5slider.js",
 		"/C/Users/Dan/AppData/Local/Temp/Temp1_DragDropInteractions.zip/DragDropInteractions/README.md",
 		"/C/Users/Dan/Documents/GitHub/SurroundUI/css/style.scss",
@@ -410,10 +430,7 @@
 		"/C/wamp/www/nexmoney/vendor/twig/twig/lib/Twig/TestCallableInterface.php",
 		"/C/wamp/www/nexmoney/vendor/composer/autoload_classmap.php",
 		"/C/wamp/www/nexmoney/themes/nexmoney/js/Calculator_Save.js",
-		"/C/wamp/www/nexmoney/themes/nexmoney/js/Calculator_Rent.js",
-		"/C/wamp/www/nexmoney/themes/nexmoney/js/Calculator_Cost.js",
-		"/C/wamp/www/nexmoney/themes/nexmoney/js/Calculator_Borrow.js",
-		"/C/wamp/www/nexmoney/themes/nexmoney/js/Calculator.js"
+		"/C/wamp/www/nexmoney/themes/nexmoney/js/Calculator_Rent.js"
 	],
 	"find":
 	{
@@ -440,6 +457,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"img",
+			"overlay",
+			"overlayI",
+			"overla",
+			"overlay",
+			"'",
+			"sw",
+			"rec",
+			"@extend .s",
 			"song",
 			" box-shadow: 0px 0px 1px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);",
 			"5",
@@ -558,16 +584,7 @@
 			"#vf",
 			"fixed-",
 			"extension=",
-			"Cost Calculator",
-			"cost cal",
-			"calcu",
-			"<li",
-			"..\\",
-			"src=\"\"",
-			"service",
-			"services",
-			"he Nexmoney promise",
-			"he Nex"
+			"Cost Calculator"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -595,7 +612,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -604,15 +621,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3231,
+						"buffer_size": 4598,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								258,
-								248
+								4598,
+								4598
 							]
 						],
 						"settings":
@@ -621,10 +638,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3058.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -633,15 +650,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10294,
+						"buffer_size": 10409,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4687,
-								4687
+								8043,
+								8043
 							]
 						],
 						"settings":
@@ -650,36 +667,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3545.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "js/main.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1729,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1136,
-								1136
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 330.0,
+						"translation.y": 9324.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

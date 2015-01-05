@@ -89,7 +89,22 @@ jQuery(document).ready(function($) {
 	$(document).on('scroll',function(){
 		loadAlbums();
 	});
+	$(window).on('resize',function(){
+		loadAlbums();
+	});
+
 	loadAlbums();
+
+
+	function calcFlow(){
+		var contWidth = $('.reccd').width();
+		var contChildren = $('.reccd').children();
+
+		var availWidth = contChildren[0];
+
+		console.log(contChildren);
+	}
+	calcFlow();
 
 
 	// Basic JS media controls. To be killed //
