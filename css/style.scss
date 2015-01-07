@@ -70,6 +70,7 @@ a {
 
 img, iframe {
 	max-width: 100%;
+	display: block;
 }
 
 @import "queries/base"; //Actual CSS

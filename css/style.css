@@ -5,7 +5,7 @@
  * http://cssreset.com
  */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, .playlist .playlist_item, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -60,7 +60,8 @@ a {
   text-decoration: none; }
 
 img, iframe {
-  max-width: 100%; }
+  max-width: 100%;
+  display: block; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
@@ -86,11 +87,18 @@ h6 {
   font-weight: 300;
   color: #c6c6c6; }
 
-p, li {
+p, .playlist .playlist_item, li {
   font-family: "Roboto", sans-serif;
   font-weight: 500; }
 
-.shadow, .album_link:active {
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none; }
+
+.shadow, .album_link:active, .album_modal ul li:active {
   box-shadow: rgba(0, 0, 0, 0.29) 0 3px 10px; }
 
 .flex {
@@ -98,7 +106,7 @@ p, li {
   flex-direction: row;
   flex-wrap: wrap; }
 
-.transition, .overlay, header, header .search_box, .search_modal, .sidebar, .control_bar, .main_view, .album_link, .album_link h5, .album_link h6, .album_link .cover_holder, .playlist, .album_modal {
+.transition, .overlay, header, header .search_box, .search_modal, .sidebar, .control_bar, .main_view, .album_link, .album_link h5, .album_link h6, .album_link .cover_holder, .playlist, .playlist .playlist_item, .album_modal, .album_modal ul li {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -409,7 +417,7 @@ header {
     padding-left: calc(14rem + 1rem); }
 
 .reccd {
-  justify-content: space-between;
+  justify-content: flex-start;
   padding-bottom: 4rem; }
 
 .album_link {
@@ -463,6 +471,8 @@ header {
       padding: 0; }
   .album_link:hover h5, .album_link:hover h6 {
     text-decoration: underline; }
+  .album_link.dragging {
+    z-index: 50; }
 
 .menu_btn {
   position: fixed;
@@ -476,18 +486,55 @@ header {
   position: fixed;
   right: 0;
   top: 50%;
-  height: 20vh;
-  width: 20vh;
+  height: 40vh;
+  width: 40vh;
   border-radius: 50%;
   background: #3d3b3b;
   z-index: 20;
   -webkit-transform: translateX(50%) translateY(-50%);
   -moz-transform: translateX(50%) translateY(-50%);
   -ms-transform: translateX(50%) translateY(-50%);
-  transform: translateX(50%) translateY(-50%); }
+  transform: translateX(50%) translateY(-50%);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 40; }
+  .playlist.dragging {
+    right: 50%;
+    align-items: center; }
   .playlist.active {
     width: 80vh;
     height: 80vh; }
+    .playlist.active .playlist_item {
+      font-size: 2rem;
+      margin: 1rem 0; }
+    .playlist.active .playlist_item:nth-of-type(1), .playlist.active .playlist_item:nth-of-type(5) {
+      -webkit-transform: translateX(2vh);
+      -moz-transform: translateX(2vh);
+      -ms-transform: translateX(2vh);
+      transform: translateX(2vh); }
+  .playlist .playlist_item {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    background: #ff6e7b;
+    cursor: pointer;
+    margin: 0.5rem 0;
+    color: white;
+    width: 100%;
+    font-weight: 300; }
+  .playlist .playlist_item:nth-of-type(1), .playlist .playlist_item:nth-of-type(5) {
+    -webkit-transform: translateX(2vh);
+    -moz-transform: translateX(2vh);
+    -ms-transform: translateX(2vh);
+    transform: translateX(2vh);
+    opacity: 0.6; }
+  .playlist .playlist_item:nth-of-type(2), .playlist .playlist_item:nth-of-type(4) {
+    opacity: 0.9; }
+  .playlist .current {
+    -webkit-transform: translateX(-3vh);
+    -moz-transform: translateX(-3vh);
+    -ms-transform: translateX(-3vh);
+    transform: translateX(-3vh); }
 
 .album_modal {
   background: #f0f0f0;
@@ -495,20 +542,35 @@ header {
   z-index: 60;
   visibility: hidden;
   opacity: 0;
-  -webkit-transform: translateY(20%);
-  -moz-transform: translateY(20%);
-  -ms-transform: translateY(20%);
-  transform: translateY(20%);
-  top: 0; }
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  top: 0;
+  top: 50%;
+  left: 50%; }
+  .album_modal > * {
+    margin: 1rem 1rem; }
+  .album_modal ul {
+    margin-top: 1rem; }
+    .album_modal ul li {
+      font-weight: 300;
+      padding: 0.5rem;
+      border-radius: 2rem;
+      background: rgba(255, 110, 123, 0);
+      cursor: pointer; }
+      .album_modal ul li:active {
+        background: #ff6e7b;
+        color: #f0f0f0; }
   .album_modal .modal_art {
-    left: 0; }
+    width: 350px;
+    margin: 0; }
+    .album_modal .modal_art img {
+      width: 100%;
+      height: auto; }
   .album_modal.visible {
     visibility: visible;
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0); }
+    opacity: 1; }
 
 .grad_bg-1 {
   background-image: -moz-linear-gradient(45deg, rgba(4, 217, 217, 0.4) 0%, rgba(188, 217, 82, 0.4) 100%);
@@ -549,3 +611,5 @@ header {
   background-image: -moz-linear-gradient(300deg, rgba(248, 72, 119, 0.5) 0%, rgba(255, 110, 123, 0.5) 100%);
   background-image: -webkit-linear-gradient(300deg, rgba(248, 72, 119, 0.5) 0%, rgba(255, 110, 123, 0.5) 100%);
   background-image: linear-gradient(300deg, rgba(248, 72, 119, 0.5) 0%, rgba(255, 110, 123, 0.5) 100%); }
+
+/*# sourceMappingURL=style.css.map */

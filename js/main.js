@@ -51,6 +51,25 @@ jQuery(document).ready(function($) {
 		},300);
 	});
 
+	var timeout;
+	albumLink.on('mousedown', function(e){
+		var self = $(this);
+		timeout = setTimeout(function(){
+			self.addClass('dragging');
+			playlist.addClass('dragging active');
+			overlay.addClass('visible');
+		},500);
+	});
+
+	albumLink.on('mouseup', function(e){
+		var self = $(this);
+		setTimeout(function(){
+			clearTimeout(timeout)
+			self.removeClass('dragging');
+			playlist.removeClass('dragging active');
+		},100);
+	});
+
 	// Overlay removes all classes on close, and re-adds overlay //
 	overlay.on('click touchend', function(){
 		overlay.removeClass().addClass('overlay');
@@ -111,7 +130,7 @@ jQuery(document).ready(function($) {
 	var audioTrack = new Audio('The Watchmaker.mp3');
 	var audioPlay = false;
 
-	$('.icon-play').on('click touchend', function(){
+	$('#play').on('click touchend', function(){
 
 		if (!audioPlay) {
 			audioTrack.play();

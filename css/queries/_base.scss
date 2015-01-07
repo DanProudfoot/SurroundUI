@@ -40,6 +40,13 @@ p,li{
 	font-weight: 500;
 }
 
+*{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
 
 .shadow{
 	box-shadow: rgba(0, 0, 0, 0.29) 0 3px 10px;
@@ -436,7 +443,7 @@ header{
 }
 
 .reccd{
-		justify-content: space-between;
+		justify-content: flex-start;
 		padding-bottom: 4rem;
 	}
 
@@ -503,6 +510,10 @@ header{
 			text-decoration: underline;
 		}
 	}
+
+	&.dragging{
+		z-index: 50;
+	}
 }
 
 .menu_btn{
@@ -518,17 +529,58 @@ header{
 	position: fixed;
 	right: 0;
 	top: 50%;
-	height: 20vh;
-	width: 20vh;
+	height: 40vh;
+	width: 40vh;
 	border-radius: 50%;
 	background: $d_grey;
 	z-index: 20;
 	@include transform(translateX(50%) translateY(-50%));
 	@extend .transition;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	z-index: 40;
+
+	&.dragging{
+		right: 50%;
+		align-items: center;
+	}
 
 	&.active{
 		width: 80vh;
 		height: 80vh;
+
+		.playlist_item{
+			font-size: 2rem;
+			margin: 1rem 0;
+		}
+		
+		.playlist_item:nth-of-type(1), .playlist_item:nth-of-type(5){
+			@include transform(translateX(2vh));
+		}
+	}
+
+	.playlist_item{
+		@extend p;
+		padding: 0.5rem 1rem;
+		@extend .transition;
+		border-radius: 2rem;
+		background: rgba($l_pink,1);
+		cursor: pointer;
+		margin: 0.5rem 0;
+		color: white;
+		width: 100%;
+		font-weight: 300;
+	}
+	.playlist_item:nth-of-type(1), .playlist_item:nth-of-type(5){
+		@include transform(translateX(2vh));
+		opacity: 0.6;
+	}
+	.playlist_item:nth-of-type(2), .playlist_item:nth-of-type(4){
+		opacity: 0.9;
+	}
+	.current{
+		@include transform(translateX(-3vh));
 	}
 }
 
@@ -538,22 +590,53 @@ header{
 	z-index: 60;
 	visibility: hidden;
 	opacity: 0;
-	@include transform(translateY(20%));
+	@include transform(translateY(-50%) translateX(-50%));
 	top: 0;
 	@extend .transition;
+	top: 50%;
+	left: 50%;
+
+	& > * {
+		margin: 1rem 1rem;
+	}
+
+	ul{
+		margin-top: 1rem;
+
+		li{
+			font-weight: 300;
+			padding: 0.5rem;
+			@extend .transition;
+			border-radius: 2rem;
+			background: rgba($l_pink,0);
+			cursor: pointer;
+			
+
+			&:active{
+				@extend .shadow;
+				background: rgba($l_pink,1);
+				color: $l_grey;
+			}
+		}
+	}
 
 	.modal_art{
-		//position: absolute;
-		left: 0;
+		width: 350px;
+		margin: 0;
+
+		img{
+			width: 100%;
+			height: auto;
+		}
 	}
 
 	&.visible{
 		visibility: visible;
 		opacity: 1;
-		@include transform(translateY(0));
 	}
 
 }
+
 
 .grad_bg-1{
 	@include gradient(45deg, rgba($blue,0.4), rgba($green,0.4));
