@@ -4,15 +4,39 @@
 		"selected_items":
 		[
 			[
+				"l",
+				"l_pink"
+			],
+			[
+				"albu",
+				"albumLink"
+			],
+			[
+				"time",
+				"timeout	setTimeout function"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
 				"for",
 				"for	for (…) {…}"
 			],
 			[
 				"mar",
-				"margin-bottom"
-			],
-			[
-				"marg",
 				"margin-bottom"
 			],
 			[
@@ -22,10 +46,6 @@
 			[
 				"l_",
 				"l_grey"
-			],
-			[
-				"font",
-				"font-size"
 			],
 			[
 				"padd",
@@ -50,14 +70,6 @@
 			[
 				"wi",
 				"width"
-			],
-			[
-				"margin",
-				"margin-top"
-			],
-			[
-				"l",
-				"l_grey"
 			],
 			[
 				"z-",
@@ -132,28 +144,34 @@
 	"buffers":
 	[
 		{
-			"file": "css/queries/_base.scss",
+			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 10406,
+				"buffer_size": 6998,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "Package Control Messages\n========================\n\nPackage Control:\n---------------\n\n  Version 3.0 Release Notes\n  \n  \n  **** Windows Sublime Text 3 Users ****\n  \n  Due to a bug in Package Control 2.0, Windows ST3 users will need to open the\n  Sublime Text console (ctrl+`) and execute the following Python to properly\n  upgrade. All other users may ignore this part of the message.\n  \n  Make sure NOT to copy the leading two spaces, or an \"unexpected indent\" error\n  will occur.\n  \n  import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')\n  \n  ********\n  \n  \n  Package Control 3.0 adds a bunch of polish, improving the Sublime Text\n  experience for users and package developers:\n  \n   - improved upgrades of themes, color schemes and syntaxes\n   - dependency support\n   - SSL for Linux\n   - new secondary Windows HTTP backend\n   - patches for Python in Sublime Text 2 on Windows\n   - commands to easily remove channels and repositories\n   - an events API for packages\n   - improved documentation\n  \n  \n  As of July 2014, I now work for myself. This has allowed me to spend more time\n  working on open source software, including Package Control. If you appreciate\n  the work I've done, please consider a small donation. If even 5% of regular\n  users donated the price of a coffee or beer, that would cover quite a bit of\n  my development time! See https://packagecontrol.io/about for options.\n  \n  \n  Some recent Package Control stats:\n  \n   - every weekday over 1M JSON requests hit the channel server\n   - in December, the channel server will transmit 4TB+ of compressed JSON\n   - users have installed, upgraded or removed 85M+ packages since late 2011\n  \n  \n  Read more about the release at:\n  \n  https://packagecontrol.io/news#2014-12-23-Package_Control_30_Released\n  \n",
+			"file": "css/queries/_base.scss",
 			"settings":
 			{
-				"buffer_size": 2331,
-				"line_ending": "Windows",
-				"name": "Package Control Messages",
-				"scratch": true
+				"buffer_size": 11234,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/main.js",
+			"settings":
+			{
+				"buffer_size": 4022,
+				"line_ending": "Windows"
 			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 311.0,
 		"selected_items":
 		[
 			[
@@ -217,12 +235,13 @@
 	],
 	"file_history":
 	[
+		"/D/Users/Dan/Documents/GitHub/Surround_UI/test.html",
+		"/D/Users/Dan/Documents/GitHub/Surround_UI/css/style.scss",
 		"/D/Users/Dan/Documents/GitHub/Surround_UI/js/main.js",
 		"/D/Users/Dan/Documents/GitHub/Surround_UI/css/queries/_base.scss",
 		"/D/Users/Dan/Documents/GitHub/Surround_UI/index.html",
 		"/D/Steam/steamapps/common/Age2HD/launcher_3082662_crash_2015_1_5T18_7_45C0.mdmp",
 		"/D/Users/Dan/Documents/GitHub/Surround_UI/css/_functions.scss",
-		"/D/Users/Dan/Documents/GitHub/Surround_UI/css/style.scss",
 		"/D/Users/Dan/Documents/GitHub/Surround_UI/literallyEmmet.txt",
 		"/D/Users/Dan/Documents/GitHub/Surround_UI/css/queries/_768.scss",
 		"/D/Users/Dan/Documents/GitHub/Surround_UI/css/queries/_600.scss",
@@ -320,7 +339,7 @@
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -336,6 +355,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"true",
+			"false",
+			"album",
+			"3",
+			"playlist",
+			"font",
 			"background: $blue; /* Old browsers */",
 			"left",
 			"count",
@@ -449,19 +474,48 @@
 			[
 				{
 					"buffer": 0,
-					"file": "css/queries/_base.scss",
+					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10406,
+						"buffer_size": 6998,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7668,
-								7668
+								2096,
+								2096
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 672.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "css/queries/_base.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11234,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8717,
+								8717
 							]
 						],
 						"settings":
@@ -470,38 +524,39 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 5685.0,
+						"translation.y": 6069.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
+					"file": "js/main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2331,
+						"buffer_size": 4022,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2331,
-								2331
+								577,
+								577
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"word_wrap": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 168.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -513,7 +568,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 30.0
 	},
 	"layout":
 	{

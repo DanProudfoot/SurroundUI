@@ -6,6 +6,7 @@ $orange: #f27b50;
 $d_grey: #3d3b3b;
 $m_grey: #c6c6c6;
 $l_grey: #f0f0f0;
+$black: rgb(23, 25, 26);
 
 $roboto: 'Roboto', sans-serif;
 
@@ -26,12 +27,13 @@ h3{
 	font-size: 1.5rem;
 }
 h5{
-	font-size: 1rem;
+	font-size: 1.2rem;
 	font-weight: 500;
 	line-height: 150%;
+	color: white;
 }
 h6{
-	font-size: 1rem;
+	font-size: 1.2rem;
 	font-weight: 300;
 	color: $m_grey;
 }
@@ -56,14 +58,36 @@ p,li{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	-webkit-display: flex;
+	-webkit-flex-direction: row;
+	-webkit-flex-wrap: wrap;
 }
 
 .transition{
 	@include transition(all 0.3s ease-in-out);
 }
 
+.no-pos-transition{
+	@include transition(none 0.3s ease-in-out);
+	transition-property: transform, background, opacity, box-shadow, margin;
+	-webkit-transition-property: transform, background, opacity, box-shadow, margin;
+	-moz-transition-property: transform, background, opacity, box-shadow, margin;
+}
+
 .float-left{
 	float: left;
+}
+
+.white{
+	color: white;
+}
+
+body{
+	background: darken(desaturate($blue,90%),30%);
+}
+
+.perspective{
+	@include perspective(3000px);
 }
 
 .overlay{
@@ -74,7 +98,7 @@ p,li{
 	left: 0;
 	visibility: hidden;
 	@extend .transition;
-	background: rgba(black,0.7);
+	background: rgba($blue,0.7);
 	@include transform(scale(0));
 	border-radius: 50%;
 	z-index: 25;
@@ -83,6 +107,14 @@ p,li{
 		visibility: visible;
 		opacity: 1;
 		@include transform(scale(2));
+	}
+
+	&.search_overlay{
+		z-index: 25;
+	}
+
+	&.album_overlay{
+		z-index: 40;
 	}
 }
 
@@ -141,9 +173,7 @@ header{
 	}
 }
 
-.search_overlay{
-	z-index: 25;
-}
+
 
 .sidebar{
 	background: rgba($d_grey,0.9);
@@ -431,26 +461,32 @@ header{
 }
 
 .main_view{
-	padding: 5rem 10vh 5rem 1rem;
+	padding: 5rem 1rem;
 	width: 100%;
 	@extend .transition;
 
-	
-
 	&.pad-left{
-		padding-left: calc(14rem + 1rem);
+		padding-left: 15rem;
 	}
+
+	&.pad-right{
+		padding-right: 15rem;
+	}
+
+
 }
 
 .reccd{
-		justify-content: flex-start;
+		justify-content: space-around;
 		padding-bottom: 4rem;
+		width: 100%;
 	}
 
 .album_link{
-	width: 166px;
-	margin: 0.5rem 1rem;
-	@extend .transition;
+	width: 12rem;
+	min-width: 150px;
+	margin: 0.5rem 10px;
+	@extend .no-pos-transition;
 	-webkit-user-select: none;  /* Chrome all / Safari all */
 	-moz-user-select: none;     /* Firefox all */
 	-ms-user-select: none;      /* IE 10+ */
@@ -470,8 +506,8 @@ header{
 	}
 
 	.cover_holder{
-		padding: 8px;
-		margin-bottom: 1rem;
+		padding: 5px;
+		margin-bottom: 0.5rem;
 		@extend .transition;
 
 		img{
@@ -498,6 +534,9 @@ header{
 		h5,h6{
 			padding: 0 0.5rem;
 		}
+		h5{
+			color: $d_grey;
+		}
 
 		.cover_holder{
 			box-shadow: none;
@@ -511,7 +550,7 @@ header{
 		}
 	}
 
-	&.dragging{
+	&.ui-draggable-dragging{
 		z-index: 50;
 	}
 }
@@ -525,33 +564,31 @@ header{
 	z-index: 40;
 }
 
-.playlist{
+.playlist_holder{
 	position: fixed;
+	height: 100%;
 	right: 0;
-	top: 50%;
-	height: 40vh;
-	width: 40vh;
-	border-radius: 50%;
+	top: 0;
+	z-index: 15;
+}
+
+.playlist{
+	height: 100%;
+	width: 14rem;
 	background: $d_grey;
-	z-index: 20;
-	@include transform(translateX(50%) translateY(-50%));
+	@include transform(rotateY(-95deg));
 	@extend .transition;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
-	z-index: 40;
-
-	&.dragging{
-		right: 50%;
-		align-items: center;
-	}
+	transform-origin: right;
+	-webkit-transform-origin: right;
+	-moz-transform-origin: right;
+	padding:  4rem 0;
 
 	&.active{
-		width: 80vh;
-		height: 80vh;
-
+		@include transform(rotateY(0deg));
 		.playlist_item{
-			font-size: 2rem;
 			margin: 1rem 0;
 		}
 		
@@ -563,7 +600,7 @@ header{
 	.playlist_item{
 		@extend p;
 		padding: 0.5rem 1rem;
-		@extend .transition;
+		@extend .no-pos-transition;
 		border-radius: 2rem;
 		background: rgba($l_pink,1);
 		cursor: pointer;
@@ -639,33 +676,18 @@ header{
 
 
 .grad_bg-1{
-	@include gradient(45deg, rgba($blue,0.4), rgba($green,0.4));
+	background: $pink;
 }
 
 .grad_bg-2{
-	@include gradient(110deg, rgba($blue,0.4), rgba($pink,0.4));
+	background: $orange;
 }
 
 .grad_bg-3{
-	@include gradient(250deg, rgba($d_grey,0.4), rgba($pink,0.4));
+	background: $green;
 }
 
 .grad_bg-4{
-	@include gradient(345deg, rgba($pink,0.4), rgba($orange,0.4));
-}
+	background: $blue;
 
-.grad_bg-5{
-	@include gradient(11deg, rgba($orange,0.4), rgba($green,0.4));
-
-}
-.grad_bg-6{
-	@include gradient(8deg, rgba($pink,0.4), rgba($green,0.4));
-}
-
-.grad_bg-7{
-	@include gradient(190deg, rgba($blue,0.4), rgba($orange,0.4));
-}
-
-.grad_bg-8{
-	@include gradient(300deg, rgba($pink,0.5), rgba($l_pink,0.5));
 }

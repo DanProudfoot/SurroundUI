@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
 	var coverHolder = $('.cover_holder');
-	var coverColours = [1,2,3,4,5,6,7,8];
+	var coverColours = [1,2,3,4];
 	var sidebar = $('.sidebar');
 	var menuBtn = $('.menu_btn');
 	var mainView = $('.main_view');
@@ -16,12 +16,21 @@ jQuery(document).ready(function($) {
 	// Generates a random number, matches to array to add coloured backgrounds //
 	function rand(){
 		return(
-			Math.floor(Math.random() * 8));
+			Math.floor(Math.random() * 4));
 	};
 
 	coverHolder.each(function(){
 		$(this).addClass('grad_bg-' + coverColours[rand()]);
 	});
+
+
+	albumLink.draggable({
+		distance: 40,
+		revert: true,
+		connectToSortable : playlist,
+		helper: "clone",
+		
+	})
 
 	//Just a load of click functions //
 	menuBtn.on('touchend click', function(e){
@@ -31,11 +40,13 @@ jQuery(document).ready(function($) {
 
 	playlist.on('touchend click', function(e){
 		$(this).toggleClass('active');
+		mainView.toggleClass('pad-right');
 	});
 
 	//Temp to test on, only reacts to raven//
 	$('.album_link:first-child').mouseup(function(){
 		overlay.addClass('visible');
+		overlay.addClass('album_overlay')
 		$('.album_modal').addClass('visible');
 	});
 
@@ -51,23 +62,8 @@ jQuery(document).ready(function($) {
 		},300);
 	});
 
-	var timeout;
-	albumLink.on('mousedown', function(e){
-		var self = $(this);
-		timeout = setTimeout(function(){
-			self.addClass('dragging');
-			playlist.addClass('dragging active');
-			overlay.addClass('visible');
-		},500);
-	});
-
-	albumLink.on('mouseup', function(e){
-		var self = $(this);
-		setTimeout(function(){
-			clearTimeout(timeout)
-			self.removeClass('dragging');
-			playlist.removeClass('dragging active');
-		},100);
+	playlist.sortable({
+		
 	});
 
 	// Overlay removes all classes on close, and re-adds overlay //
@@ -91,7 +87,7 @@ jQuery(document).ready(function($) {
 	}
 
 	function loadAlbums(){
-		var delta = 50;
+		var delta = 30;
 		var time = 0;
 
 		albumLink.each(function(){
@@ -104,28 +100,52 @@ jQuery(document).ready(function($) {
 			};
 		})
 	}
-	
+
+	// function reflowMargin(){
+	// 	var itemWidth = albumLink.outerWidth();
+	// 	var containerWidth = $(".reccd").outerWidth();
+
+	// 	var rowCount = Math.floor(containerWidth / albumLink.outerWidth());
+	// 	var spaceAvail = Math.floor(containerWidth / rowCount) - itemWidth -10;
+	// 	var marginBetween = (spaceAvail+10);
+
+	// 	albumLink.css("margin", "0.5rem " + marginBetween + "px");
+
+	// 	console.log(spaceAvail);
+	// }
+
+	function reflowMargin(){
+		var itemWidth = albumLink.outerWidth(true);
+		var containerWidth = $(".reccd").outerWidth();
+		var children = $(".reccd").children();
+		var childrenCount = children.length;
+
+		var rowCount = Math.floor(containerWidth / itemWidth);
+		var fullRows = Math.floor(childrenCount / rowCount);
+		var leftover = childrenCount - (fullRows * rowCount);
+
+		if (leftover > 0) {
+			for (var i = childrenCount - leftover; i <= childrenCount; i++) {
+				var prevOffset = $(children[i - rowCount]).position().left;
+				$(children[i]).css("left", "-" + 20 * i +"px");
+
+				console.log(prevOffset);
+			};
+		};
+	}
+
 	$(document).on('scroll',function(){
 		loadAlbums();
+		reflowMargin();
 	});
 	$(window).on('resize',function(){
 		loadAlbums();
+		reflowMargin();
 	});
 
 	loadAlbums();
-
-
-	function calcFlow(){
-		var contWidth = $('.reccd').width();
-		var contChildren = $('.reccd').children();
-
-		var availWidth = contChildren[0];
-
-		console.log(contChildren);
-	}
-	calcFlow();
-
-
+	reflowMargin();
+	
 	// Basic JS media controls. To be killed //
 	var audioTrack = new Audio('The Watchmaker.mp3');
 	var audioPlay = false;

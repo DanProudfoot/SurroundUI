@@ -78,12 +78,13 @@ h3 {
   font-size: 1.5rem; }
 
 h5 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  line-height: 150%; }
+  line-height: 150%;
+  color: white; }
 
 h6 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 300;
   color: #c6c6c6; }
 
@@ -104,16 +105,40 @@ p, .playlist .playlist_item, li {
 .flex {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  -webkit-display: flex;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap; }
 
-.transition, .overlay, header, header .search_box, .search_modal, .sidebar, .control_bar, .main_view, .album_link, .album_link h5, .album_link h6, .album_link .cover_holder, .playlist, .playlist .playlist_item, .album_modal, .album_modal ul li {
+.transition, .overlay, header, header .search_box, .search_modal, .sidebar, .control_bar, .main_view, .album_link h5, .album_link h6, .album_link .cover_holder, .playlist, .album_modal, .album_modal ul li {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
 
+.no-pos-transition, .album_link, .playlist .playlist_item {
+  -webkit-transition: none 0.3s ease-in-out;
+  -moz-transition: none 0.3s ease-in-out;
+  -ms-transition: none 0.3s ease-in-out;
+  transition: none 0.3s ease-in-out;
+  transition-property: transform, background, opacity, box-shadow, margin;
+  -webkit-transition-property: transform, background, opacity, box-shadow, margin;
+  -moz-transition-property: transform, background, opacity, box-shadow, margin; }
+
 .float-left {
   float: left; }
+
+.white {
+  color: white; }
+
+body {
+  background: #202424; }
+
+.perspective {
+  -webkit-perspective: 3000px;
+  -moz-perspective: 3000px;
+  -ms-perspective: 3000px;
+  perspective: 3000px; }
 
 .overlay {
   width: 100vw;
@@ -122,7 +147,7 @@ p, .playlist .playlist_item, li {
   top: -50%;
   left: 0;
   visibility: hidden;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(4, 217, 217, 0.7);
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
@@ -136,6 +161,10 @@ p, .playlist .playlist_item, li {
     -moz-transform: scale(2);
     -ms-transform: scale(2);
     transform: scale(2); }
+  .overlay.search_overlay {
+    z-index: 25; }
+  .overlay.album_overlay {
+    z-index: 40; }
 
 header {
   background: #04d9d9;
@@ -181,9 +210,6 @@ header {
     transform: translateY(0%); }
   .search_modal .searched_for {
     justify-content: center; }
-
-.search_overlay {
-  z-index: 25; }
 
 .sidebar {
   background: rgba(61, 59, 59, 0.9);
@@ -411,18 +437,22 @@ header {
       background: #050505; }
 
 .main_view {
-  padding: 5rem 10vh 5rem 1rem;
+  padding: 5rem 1rem;
   width: 100%; }
   .main_view.pad-left {
-    padding-left: calc(14rem + 1rem); }
+    padding-left: 15rem; }
+  .main_view.pad-right {
+    padding-right: 15rem; }
 
 .reccd {
-  justify-content: flex-start;
-  padding-bottom: 4rem; }
+  justify-content: space-around;
+  padding-bottom: 4rem;
+  width: 100%; }
 
 .album_link {
-  width: 166px;
-  margin: 0.5rem 1rem;
+  width: 12rem;
+  min-width: 150px;
+  margin: 0.5rem 10px;
   -webkit-user-select: none;
   /* Chrome all / Safari all */
   -moz-user-select: none;
@@ -443,8 +473,8 @@ header {
   position: relative;
   z-index: 5; }
   .album_link .cover_holder {
-    padding: 8px;
-    margin-bottom: 1rem; }
+    padding: 5px;
+    margin-bottom: 0.5rem; }
     .album_link .cover_holder img {
       width: 100%;
       height: auto;
@@ -466,12 +496,14 @@ header {
     z-index: 6; }
     .album_link:active h5, .album_link:active h6 {
       padding: 0 0.5rem; }
+    .album_link:active h5 {
+      color: #3d3b3b; }
     .album_link:active .cover_holder {
       box-shadow: none;
       padding: 0; }
   .album_link:hover h5, .album_link:hover h6 {
     text-decoration: underline; }
-  .album_link.dragging {
+  .album_link.ui-draggable-dragging {
     z-index: 50; }
 
 .menu_btn {
@@ -482,31 +514,34 @@ header {
   color: white;
   z-index: 40; }
 
-.playlist {
+.playlist_holder {
   position: fixed;
+  height: 100%;
   right: 0;
-  top: 50%;
-  height: 40vh;
-  width: 40vh;
-  border-radius: 50%;
+  top: 0;
+  z-index: 15; }
+
+.playlist {
+  height: 100%;
+  width: 14rem;
   background: #3d3b3b;
-  z-index: 20;
-  -webkit-transform: translateX(50%) translateY(-50%);
-  -moz-transform: translateX(50%) translateY(-50%);
-  -ms-transform: translateX(50%) translateY(-50%);
-  transform: translateX(50%) translateY(-50%);
+  -webkit-transform: rotateY(-95deg);
+  -moz-transform: rotateY(-95deg);
+  -ms-transform: rotateY(-95deg);
+  transform: rotateY(-95deg);
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  z-index: 40; }
-  .playlist.dragging {
-    right: 50%;
-    align-items: center; }
+  transform-origin: right;
+  -webkit-transform-origin: right;
+  -moz-transform-origin: right;
+  padding: 4rem 0; }
   .playlist.active {
-    width: 80vh;
-    height: 80vh; }
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
     .playlist.active .playlist_item {
-      font-size: 2rem;
       margin: 1rem 0; }
     .playlist.active .playlist_item:nth-of-type(1), .playlist.active .playlist_item:nth-of-type(5) {
       -webkit-transform: translateX(2vh);
@@ -573,43 +608,15 @@ header {
     opacity: 1; }
 
 .grad_bg-1 {
-  background-image: -moz-linear-gradient(45deg, rgba(4, 217, 217, 0.4) 0%, rgba(188, 217, 82, 0.4) 100%);
-  background-image: -webkit-linear-gradient(45deg, rgba(4, 217, 217, 0.4) 0%, rgba(188, 217, 82, 0.4) 100%);
-  background-image: linear-gradient(45deg, rgba(4, 217, 217, 0.4) 0%, rgba(188, 217, 82, 0.4) 100%); }
+  background: #f84877; }
 
 .grad_bg-2 {
-  background-image: -moz-linear-gradient(110deg, rgba(4, 217, 217, 0.4) 0%, rgba(248, 72, 119, 0.4) 100%);
-  background-image: -webkit-linear-gradient(110deg, rgba(4, 217, 217, 0.4) 0%, rgba(248, 72, 119, 0.4) 100%);
-  background-image: linear-gradient(110deg, rgba(4, 217, 217, 0.4) 0%, rgba(248, 72, 119, 0.4) 100%); }
+  background: #f27b50; }
 
 .grad_bg-3 {
-  background-image: -moz-linear-gradient(250deg, rgba(61, 59, 59, 0.4) 0%, rgba(248, 72, 119, 0.4) 100%);
-  background-image: -webkit-linear-gradient(250deg, rgba(61, 59, 59, 0.4) 0%, rgba(248, 72, 119, 0.4) 100%);
-  background-image: linear-gradient(250deg, rgba(61, 59, 59, 0.4) 0%, rgba(248, 72, 119, 0.4) 100%); }
+  background: #bcd952; }
 
 .grad_bg-4 {
-  background-image: -moz-linear-gradient(345deg, rgba(248, 72, 119, 0.4) 0%, rgba(242, 123, 80, 0.4) 100%);
-  background-image: -webkit-linear-gradient(345deg, rgba(248, 72, 119, 0.4) 0%, rgba(242, 123, 80, 0.4) 100%);
-  background-image: linear-gradient(345deg, rgba(248, 72, 119, 0.4) 0%, rgba(242, 123, 80, 0.4) 100%); }
-
-.grad_bg-5 {
-  background-image: -moz-linear-gradient(11deg, rgba(242, 123, 80, 0.4) 0%, rgba(188, 217, 82, 0.4) 100%);
-  background-image: -webkit-linear-gradient(11deg, rgba(242, 123, 80, 0.4) 0%, rgba(188, 217, 82, 0.4) 100%);
-  background-image: linear-gradient(11deg, rgba(242, 123, 80, 0.4) 0%, rgba(188, 217, 82, 0.4) 100%); }
-
-.grad_bg-6 {
-  background-image: -moz-linear-gradient(8deg, rgba(248, 72, 119, 0.4) 0%, rgba(188, 217, 82, 0.4) 100%);
-  background-image: -webkit-linear-gradient(8deg, rgba(248, 72, 119, 0.4) 0%, rgba(188, 217, 82, 0.4) 100%);
-  background-image: linear-gradient(8deg, rgba(248, 72, 119, 0.4) 0%, rgba(188, 217, 82, 0.4) 100%); }
-
-.grad_bg-7 {
-  background-image: -moz-linear-gradient(190deg, rgba(4, 217, 217, 0.4) 0%, rgba(242, 123, 80, 0.4) 100%);
-  background-image: -webkit-linear-gradient(190deg, rgba(4, 217, 217, 0.4) 0%, rgba(242, 123, 80, 0.4) 100%);
-  background-image: linear-gradient(190deg, rgba(4, 217, 217, 0.4) 0%, rgba(242, 123, 80, 0.4) 100%); }
-
-.grad_bg-8 {
-  background-image: -moz-linear-gradient(300deg, rgba(248, 72, 119, 0.5) 0%, rgba(255, 110, 123, 0.5) 100%);
-  background-image: -webkit-linear-gradient(300deg, rgba(248, 72, 119, 0.5) 0%, rgba(255, 110, 123, 0.5) 100%);
-  background-image: linear-gradient(300deg, rgba(248, 72, 119, 0.5) 0%, rgba(255, 110, 123, 0.5) 100%); }
+  background: #04d9d9; }
 
 /*# sourceMappingURL=style.css.map */
