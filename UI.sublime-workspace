@@ -4,6 +4,70 @@
 		"selected_items":
 		[
 			[
+				"backgr",
+				"background-position"
+			],
+			[
+				"addl",
+				"addClass"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"backg",
+				"background-repeat"
+			],
+			[
+				"backgrou",
+				"background-size"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"for",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"childr",
+				"childrenCount"
+			],
+			[
+				"chil",
+				"childrenCount"
+			],
+			[
+				"margi",
+				"marginBetween"
+			],
+			[
+				"sp",
+				"spaceAvail"
+			],
+			[
+				"con",
+				"containerWidth"
+			],
+			[
+				"ad",
+				"addClasses"
+			],
+			[
+				"album",
+				"albumLink"
+			],
+			[
+				"cover",
+				"coverHolder"
+			],
+			[
 				"l",
 				"l_pink"
 			],
@@ -32,24 +96,12 @@
 				"margin"
 			],
 			[
-				"for",
-				"for	for (…) {…}"
-			],
-			[
 				"mar",
 				"margin-bottom"
 			],
 			[
-				"pad",
-				"padding"
-			],
-			[
 				"l_",
 				"l_grey"
-			],
-			[
-				"padd",
-				"padding"
 			],
 			[
 				"back",
@@ -74,10 +126,6 @@
 			[
 				"z-",
 				"z-index"
-			],
-			[
-				"backg",
-				"background-position"
 			],
 			[
 				"tex",
@@ -147,7 +195,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 6998,
+				"buffer_size": 8305,
 				"line_ending": "Windows"
 			}
 		},
@@ -155,7 +203,7 @@
 			"file": "css/queries/_base.scss",
 			"settings":
 			{
-				"buffer_size": 11234,
+				"buffer_size": 14099,
 				"line_ending": "Windows"
 			}
 		},
@@ -163,7 +211,7 @@
 			"file": "js/main.js",
 			"settings":
 			{
-				"buffer_size": 4022,
+				"buffer_size": 4107,
 				"line_ending": "Windows"
 			}
 		}
@@ -235,6 +283,8 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Dan/Desktop/jquery-ui-1.11.2.custom/jquery-ui.min.css",
+		"/C/Users/Dan/Desktop/jquery-ui-1.11.2.custom/jquery-ui.structure.css",
 		"/D/Users/Dan/Documents/GitHub/Surround_UI/test.html",
 		"/D/Users/Dan/Documents/GitHub/Surround_UI/css/style.scss",
 		"/D/Users/Dan/Documents/GitHub/Surround_UI/js/main.js",
@@ -355,6 +405,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"%;",
+			"green",
+			"#00EF08",
+			"#FFFFFF",
+			"grad",
+			"no_focus",
+			"	\n",
+			"left",
+			"section",
+			"\",\n",
+			"opacity",
+			")",
+			"console",
+			"active",
+			"albumli",
+			"coverHolder",
+			"body",
 			"true",
 			"false",
 			"album",
@@ -478,15 +545,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6998,
+						"buffer_size": 8305,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2096,
-								2096
+								3458,
+								3458
 							]
 						],
 						"settings":
@@ -495,10 +562,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 672.0,
+						"translation.y": 994.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -507,15 +574,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11234,
+						"buffer_size": 14099,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8717,
-								8717
+								9301,
+								9301
 							]
 						],
 						"settings":
@@ -524,7 +591,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6069.0,
+						"translation.y": 6466.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -536,15 +603,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4022,
+						"buffer_size": 4107,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								577,
-								577
+								1587,
+								1587
 							]
 						],
 						"settings":
@@ -553,10 +620,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 168.0,
+						"translation.y": 14.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

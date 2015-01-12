@@ -13,6 +13,17 @@ jQuery(document).ready(function($) {
 	var overlay = $('.overlay');
 	var overlayInside = $('.overlay_inside');
 
+	$(window).scroll(function() {    
+    	var scroll = $(window).scrollTop();
+
+    	if (scroll >= 100) {
+    		header.addClass('scrolled');
+    	} else {
+    		header.removeClass('scrolled');
+    	}
+
+    });
+
 	// Generates a random number, matches to array to add coloured backgrounds //
 	function rand(){
 		return(
@@ -29,13 +40,13 @@ jQuery(document).ready(function($) {
 		revert: true,
 		connectToSortable : playlist,
 		helper: "clone",
-		
 	})
 
 	//Just a load of click functions //
 	menuBtn.on('touchend click', function(e){
 		sidebar.toggleClass('open');
 		mainView.toggleClass('pad-left');
+		$('.big_header').toggleClass('pad-left');
 	});
 
 	playlist.on('touchend click', function(e){
@@ -48,6 +59,11 @@ jQuery(document).ready(function($) {
 		overlay.addClass('visible');
 		overlay.addClass('album_overlay')
 		$('.album_modal').addClass('visible');
+	});
+
+	$('.item').on('click', function(){
+		$('.item').removeClass('focus');
+		$(this).addClass('focus');
 	});
 
 	// Search controls complicated modal //
@@ -114,37 +130,15 @@ jQuery(document).ready(function($) {
 	// 	console.log(spaceAvail);
 	// }
 
-	function reflowMargin(){
-		var itemWidth = albumLink.outerWidth(true);
-		var containerWidth = $(".reccd").outerWidth();
-		var children = $(".reccd").children();
-		var childrenCount = children.length;
-
-		var rowCount = Math.floor(containerWidth / itemWidth);
-		var fullRows = Math.floor(childrenCount / rowCount);
-		var leftover = childrenCount - (fullRows * rowCount);
-
-		if (leftover > 0) {
-			for (var i = childrenCount - leftover; i <= childrenCount; i++) {
-				var prevOffset = $(children[i - rowCount]).position().left;
-				$(children[i]).css("left", "-" + 20 * i +"px");
-
-				console.log(prevOffset);
-			};
-		};
-	}
 
 	$(document).on('scroll',function(){
 		loadAlbums();
-		reflowMargin();
 	});
 	$(window).on('resize',function(){
 		loadAlbums();
-		reflowMargin();
 	});
 
 	loadAlbums();
-	reflowMargin();
 	
 	// Basic JS media controls. To be killed //
 	var audioTrack = new Audio('The Watchmaker.mp3');
