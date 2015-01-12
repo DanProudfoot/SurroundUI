@@ -536,7 +536,7 @@ header{
 		background-image: -webkit-linear-gradient(bottom, rgba($green,0) 0%, $green 100%);
 		background-image: linear-gradient(to top, rgba($green,0) 0%, $green 100%);
 	}
-	&.item_2-grad{
+	&.item_2-grad:before{
 		content: "";
 		height: 30%;
 		width: 100%;
@@ -546,7 +546,7 @@ header{
 		background-image: -webkit-linear-gradient(bottom, rgba($pink,0) 0%, $pink 100%);
 		background-image: linear-gradient(to top, rgba($pink,0) 0%, $pink 100%);
 	}
-	&.item_3-grad{
+	&.item_3-grad:before{
 		content: "";
 		height: 30%;
 		width: 100%;

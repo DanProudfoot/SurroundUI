@@ -486,7 +486,7 @@ header {
     background-image: -moz-linear-gradient(bottom, rgba(188, 217, 82, 0) 0%, #bcd952 100%);
     background-image: -webkit-linear-gradient(bottom, rgba(188, 217, 82, 0) 0%, #bcd952 100%);
     background-image: linear-gradient(to top, rgba(188, 217, 82, 0) 0%, #bcd952 100%); }
-  .big_header.item_2-grad {
+  .big_header.item_2-grad:before {
     content: "";
     height: 30%;
     width: 100%;
@@ -495,7 +495,7 @@ header {
     background-image: -moz-linear-gradient(bottom, rgba(248, 72, 119, 0) 0%, #f84877 100%);
     background-image: -webkit-linear-gradient(bottom, rgba(248, 72, 119, 0) 0%, #f84877 100%);
     background-image: linear-gradient(to top, rgba(248, 72, 119, 0) 0%, #f84877 100%); }
-  .big_header.item_3-grad {
+  .big_header.item_3-grad:before {
     content: "";
     height: 30%;
     width: 100%;

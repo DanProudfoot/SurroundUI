@@ -64,6 +64,12 @@ jQuery(document).ready(function($) {
 	$('.item').on('click', function(){
 		$('.item').removeClass('focus');
 		$(this).addClass('focus');
+
+		if ($(this).hasClass('focus')) {
+			$('.big_header').removeClass().addClass('big_header flex');
+			var color = $(this).data('grad');
+			$('.big_header').addClass(color);
+		};
 	});
 
 	// Search controls complicated modal //
