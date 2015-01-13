@@ -45,14 +45,22 @@ jQuery(document).ready(function($) {
 	//Just a load of click functions //
 	menuBtn.on('touchend click', function(e){
 		sidebar.toggleClass('open');
-		mainView.toggleClass('pad-left');
+		// mainView.toggleClass('pad-left');
 		$('.big_header').toggleClass('pad-left');
 	});
 
 	playlist.on('touchend click', function(e){
 		$(this).toggleClass('active');
-		mainView.toggleClass('pad-right');
+		// mainView.toggleClass('pad-right');
+		$('.dot').removeClass('active');
+		$('.big_header').removeClass('pad-right');
 	});
+
+	$('.dot').on('click', function(){
+		$(this).addClass('active');
+		playlist.toggleClass('active');
+		$('.big_header').addClass('pad-right');
+	})
 
 	//Temp to test on, only reacts to raven//
 	$('.album_link:first-child').mouseup(function(){

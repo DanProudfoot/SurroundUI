@@ -247,7 +247,6 @@ header{
 		align-self: flex-end;
 		height: 0;
 		width: 60%;
-		margin-bottom: 1rem;
 
 		.float-left{
 			margin-left: 1rem;
@@ -263,8 +262,8 @@ header{
 			//@extend .shadow;
 			width: 128px;
 			float: left;
+			margin-bottom: 1rem;
 			
-
 			img{
 				width: 100%;
 				height: auto;
@@ -391,6 +390,7 @@ header{
 		padding: 4rem 1rem 0;
 		position: absolute;
 		z-index: 20;
+		pointer-events:none;
 
 		h1{
 			text-shadow: rgba(0, 0, 0, 0.86) 3px 3px 4px;
@@ -450,6 +450,7 @@ header{
 		background-image: -moz-linear-gradient(bottom, rgba($green,0) 0%, $green 100%);
 		background-image: -webkit-linear-gradient(bottom, rgba($green,0) 0%, $green 100%);
 		background-image: linear-gradient(to top, rgba($green,0) 0%, $green 100%);
+		left: 0; top: 0;
 	}
 	&.item_2-grad:before{
 		content: "";
@@ -460,6 +461,7 @@ header{
 		background-image: -moz-linear-gradient(bottom, rgba($pink,0) 0%, $pink 100%);
 		background-image: -webkit-linear-gradient(bottom, rgba($pink,0) 0%, $pink 100%);
 		background-image: linear-gradient(to top, rgba($pink,0) 0%, $pink 100%);
+		left: 0; top: 0;
 	}
 	&.item_3-grad:before{
 		content: "";
@@ -470,15 +472,20 @@ header{
 		background-image: -moz-linear-gradient(bottom, rgba($orange,0) 0%, $orange 100%);
 		background-image: -webkit-linear-gradient(bottom, rgba($orange,0) 0%, $orange 100%);
 		background-image: linear-gradient(to top, rgba($orange,0) 0%, $orange 100%);
+		left: 0; top: 0;
 	}
 
 	&.pad-left{
 		padding-left: 14rem;
+	}
+
+	&.pad-right{
+		padding-right: 12rem;
 	}	
 }
 
 .main_view{
-	padding: 2rem 1rem;
+	padding: 2rem 12.5% 5rem;
 	width: 100%;
 	@extend .transition;
 
@@ -500,7 +507,7 @@ header{
 	}
 
 .album_link{
-	width: 12rem;
+	width: 11rem;
 	min-width: 150px;
 	margin: 0.5rem 0.7rem;
 	@extend .no-pos-transition;
@@ -517,6 +524,7 @@ header{
 	visibility: hidden;
 	position: relative;
 	z-index: 5;
+	background: lighten($d_grey,10%);
 
 	h5,h6{
 		@extend .transition;
@@ -587,11 +595,40 @@ header{
 	right: 0;
 	top: 0;
 	z-index: 15;
+	pointer-events: none;
+
+	*{
+		pointer-events:all;
+	}
+
+	.dot{
+		width: 10rem;
+		height: 10rem;
+		border-radius: 50%;
+		background: $pink;
+		position: absolute;
+		right: -5rem;
+		top: calc(50% - 5rem);
+		@extend .transition;
+
+		&.icon-chevron-left:before{
+			font-size: 4rem;
+			position: absolute;
+			color: $l_grey;
+			width: 100%;
+			display: block;
+			padding: 3.5rem 1rem;
+		}
+
+		&.active{
+			@include transform(translateX(100%));
+		}
+	}
 }
 
 .playlist{
 	height: 100%;
-	width: 14rem;
+	width: 12rem;
 	background: $d_grey;
 	@include transform(rotateY(-95deg));
 	@extend .transition;
